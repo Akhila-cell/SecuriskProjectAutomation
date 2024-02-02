@@ -10,9 +10,14 @@ public class Tc_Policyterms extends Tc_Coveragedetails {
 	public void PolicytermsPage() throws InterruptedException
 	{
 		policyTermspage pt = new policyTermspage(driver);
-		pt.clickonedit();
-		Thread.sleep(2000);
-		pt.clickonaddPolicy();
+		pt.clickonEditButton();
+		Thread.sleep(3000);
+		pt.clickonEditCoverages("Fever");
+//		Thread.sleep(2000);
+//		pt.clickonEdit_Limit_Remarks("Test1");
+//		Thread.sleep(3000);
+		
+		//pt.clickonaddPolicy();
 		Thread.sleep(2000);
 		pt.clickonnext();
 	

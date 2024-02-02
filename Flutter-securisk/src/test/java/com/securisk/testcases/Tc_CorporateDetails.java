@@ -75,9 +75,12 @@ public class Tc_CorporateDetails extends Tc_RfqPage {
 		Thread.sleep(2000);
 		String Path = Rm.ScreenshotPath("CoverageDetailspage");
 		test.log(LogStatus.PASS, test.addScreenCapture(Path) + "Corporate details entered successfully");
-		Thread.sleep(2000);
-		//Rm.Scrollup();
+		Thread.sleep(3000);
 		endReport();
+		//Rm.Scrollup();
+		
+		
+		//Thread.sleep(3000);
 	}
 
 }

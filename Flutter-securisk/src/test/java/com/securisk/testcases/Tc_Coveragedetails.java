@@ -12,6 +12,7 @@ public class Tc_Coveragedetails extends Tc_CorporateDetails{
 	{
 		Reusablemethods Rm = new Reusablemethods(driver);
 		Coveragedetailspage cd = new Coveragedetailspage(driver);
+		Thread.sleep(2000);
 		cd.clickOnPolicyType();
 		Thread.sleep(2000);
 		cd.select_Floater();
