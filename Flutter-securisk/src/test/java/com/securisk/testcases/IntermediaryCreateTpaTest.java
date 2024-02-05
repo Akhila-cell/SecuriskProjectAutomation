@@ -1,4 +1,4 @@
-package testcases;
+package com.securisk.testcases;
 
 public class IntermediaryCreateTpaTest  extends Baseclass{
 

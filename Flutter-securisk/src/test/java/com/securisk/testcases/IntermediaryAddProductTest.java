@@ -1,12 +1,11 @@
-package testcases;
+package com.securisk.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
-
-import pageobjects.IntermediaryProductsPage;
-import pageobjects.Reusablemethods;
+import com.securisk.pageobjects.IntermediaryProductsPage;
+import com.securisk.pageobjects.Reusablemethods;
 
 
 public class IntermediaryAddProductTest extends Baseclass{
