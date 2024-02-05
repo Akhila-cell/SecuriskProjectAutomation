@@ -2,18 +2,22 @@ package com.securisk.testcases;
 
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.securisk.utilities.Readconfig;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Baseclass {
@@ -33,7 +37,7 @@ public class Baseclass {
 
 	public void WaitUntilElementVisible(WebElement element) {
 		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-       wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	@BeforeSuite
