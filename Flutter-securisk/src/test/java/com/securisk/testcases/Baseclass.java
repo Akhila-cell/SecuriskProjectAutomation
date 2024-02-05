@@ -31,10 +31,10 @@ public class Baseclass {
 		Baseclass.wait = wait;
 	}
 
-//	protected void WaitUntilElementVisible(WebElement element) {
-//		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-//wait.until(ExpectedConditions.visibilityOf(element));
-//	}
+	public void WaitUntilElementVisible(WebElement element) {
+		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+       wait.until(ExpectedConditions.visibilityOf(element));
+	}
 
 	@BeforeSuite
 
