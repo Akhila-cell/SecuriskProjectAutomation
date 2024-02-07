@@ -38,7 +38,7 @@ public class IntermediaryTpaPageElements {
 	@FindBy(css = "flt-semantics[aria-label='Create']")
 	public WebElement CreateButton;
 	@FindBy(css = "flt-semantics[aria-label='Tpa added successfully!']")
-	public WebElement ConfirmCreateTpa;
+	public WebElement ConfirmCreateTpatext;
 	@FindBy(css = "flt-semantics[aria-label='Close']")
 	public WebElement ClosePopupbtn;
 	@FindBy(css = "input[aria-label='Search']")
@@ -51,7 +51,9 @@ public class IntermediaryTpaPageElements {
 	public WebElement ShowmenuBtn;
 	@FindBy(css = "flt-semantics[aria-label='Edit']")
 	public WebElement EditTpaBtn;
-	@FindBy(css = "//flt-semantics[contains(@aria-label,'Location')]")
+	@FindBy(css = "flt-semantics[aria-label='Tpa updated successfully!']")
+	public WebElement ConfirmUpdateTpaText;
+	@FindBy(xpath = "//flt-semantics[contains(@aria-label,'Location')]")
 	public WebElement EditTpaLocation;
 	@FindBy(css = "flt-semantics[aria-label='Submit']")
 	public WebElement SubmitTpaBtn;
@@ -63,6 +65,12 @@ public class IntermediaryTpaPageElements {
 	public WebElement ConfimDeleteNoBtn;
 	@FindBy(css = "flt-semantics[aria-label='OK']")
 	public WebElement OkBtn;
+	@FindBy(css = "flt-semantics[aria-label='Next']")
+	public WebElement Nextbtn;
+	@FindBy(css = "flt-semantics[aria-label='Actions']")
+	public WebElement actionsBtn;
+	@FindBy(css = "flt-semantics[aria-label='Deleted Successfully']")
+	public WebElement ConfirmDelete;
 
 	public void clickOnIntermediary() {
 		IntermediaryDropdown.isEnabled();
@@ -118,6 +126,10 @@ public class IntermediaryTpaPageElements {
 		CreateButton.click();
 	}
 
+	public boolean ConfirmCreateTpa() {
+		return ConfirmCreateTpatext.isDisplayed();
+	}
+
 	public void closePopUP() {
 		ClosePopupbtn.isEnabled();
 		ClosePopupbtn.click();
@@ -132,30 +144,50 @@ public class IntermediaryTpaPageElements {
 		FilterDropdown.isEnabled();
 		FilterDropdown.click();
 	}
+
+	public void clickonShowMenu() {
+		ShowmenuBtn.isEnabled();
+		ShowmenuBtn.click();
+	}
+
 	public void clickOnEditTpa() {
 		EditTpaBtn.isEnabled();
-		EditTpaBtn.click();	
+		EditTpaBtn.click();
 	}
-	
+
 	public void selectNewLocation() {
 		EditTpaLocation.isEnabled();
 		EditTpaLocation.click();
-		
+
 	}
+
+	public void selectPune() {
+		PuneValue.isEnabled();
+		PuneValue.click();
+	}
+
 	public void clickonSubmitTpa() {
 		SubmitTpaBtn.isEnabled();
 		SubmitTpaBtn.click();
-		
+
 	}
-	public void clickOnProductDelete() {
+
+	public boolean ConfirmUpdateTpa() {
+		return ConfirmUpdateTpaText.isDisplayed();
+	}
+
+	public void clickOnDeleteTpa() {
 		DeleteTpaBtn.isEnabled();
 		DeleteTpaBtn.click();
 	}
 
-	public void acceptDeleteProduct() {
+	public void acceptDeleteTpa() {
 		ConfimDeleteYesBtn.isEnabled();
 		ConfimDeleteYesBtn.click();
+	}
 
+	public boolean confirmDeleteTpa() {
+		return ConfirmDelete.isDisplayed();
 	}
 
 	public void clickonOkBtn() {
@@ -163,10 +195,14 @@ public class IntermediaryTpaPageElements {
 		OkBtn.click();
 	}
 
-	public void rejectDeleteProduct() {
+	public void rejectDeleteTpa() {
 		ConfimDeleteNoBtn.isEnabled();
 		ConfimDeleteNoBtn.click();
 	}
-	
+
+	public void clickOnNext() {
+		Nextbtn.isEnabled();
+		Nextbtn.click();
+	}
 
 }

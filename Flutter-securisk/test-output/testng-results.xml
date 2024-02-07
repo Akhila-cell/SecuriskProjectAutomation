@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="2" failed="3" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2024-02-07T15:59:12 IST" name="Default suite" finished-at="2024-02-07T16:00:16 IST" duration-ms="63267">
+    <groups>
+    </groups>
+    <test started-at="2024-02-07T15:59:12 IST" name="Default test" finished-at="2024-02-07T16:00:16 IST" duration-ms="63267">
+      <class name="com.securisk.testcases.IntermediaryDeleteProductTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:04 IST" name="setup" finished-at="2024-02-07T15:59:12 IST" duration-ms="8549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addProduct()[pri:2, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:12 IST" name="addProduct" finished-at="2024-02-07T15:59:32 IST" duration-ms="19354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProduct -->
+        <test-method signature="addProductWithInvalid()[pri:3, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:32 IST" name="addProductWithInvalid" finished-at="2024-02-07T15:59:39 IST" duration-ms="7262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductWithInvalid -->
+        <test-method signature="addCoverage()[pri:4, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:39 IST" name="addCoverage" finished-at="2024-02-07T15:59:52 IST" duration-ms="12906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCoverage -->
+        <test-method signature="addCoverageWithInvalidata()[pri:5, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:52 IST" name="addCoverageWithInvalidata" finished-at="2024-02-07T15:59:54 IST" duration-ms="2370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCoverageWithInvalidata -->
+        <test-method signature="editProduct()[pri:6, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T15:59:54 IST" name="editProduct" finished-at="2024-02-07T16:00:06 IST" duration-ms="11534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editProduct -->
+        <test-method signature="deleteProduct()[pri:7, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T16:00:06 IST" name="deleteProduct" finished-at="2024-02-07T16:00:16 IST" duration-ms="9802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.securisk.testcases.IntermediaryDeleteProductTest@3012646b]" started-at="2024-02-07T16:00:16 IST" name="teardown" finished-at="2024-02-07T16:00:16 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.securisk.testcases.IntermediaryDeleteProductTest -->
+=======
   <suite started-at="2024-02-07T14:55:02 IST" name="Default suite" finished-at="2024-02-07T14:56:37 IST" duration-ms="95516">
     <groups>
     </groups>
@@ -236,6 +276,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.securisk.testcases.Tc_SendRfq -->
+>>>>>>> 17a2053aeb4aad8c619e59a11f540085e9858084
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

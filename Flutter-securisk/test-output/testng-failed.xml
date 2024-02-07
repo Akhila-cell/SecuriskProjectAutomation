@@ -3,15 +3,31 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.securisk.testcases.IntermediaryDeleteProductTest">
+=======
       <class name="com.securisk.testcases.Tc_SendRfq">
+>>>>>>> 17a2053aeb4aad8c619e59a11f540085e9858084
         <methods>
+          <include name="addProductWithInvalid"/>
+          <include name="editProduct"/>
           <include name="setup"/>
+<<<<<<< HEAD
+          <include name="addCoverage"/>
+          <include name="deleteProduct"/>
+          <include name="teardown"/>
+          <include name="addCoverageWithInvalidata"/>
+          <include name="addProduct"/>
+        </methods>
+      </class> <!-- com.securisk.testcases.IntermediaryDeleteProductTest -->
+=======
           <include name="PolicytermsPage"/>
           <include name="createrfq"/>
           <include name="teardown"/>
           <include name="coveragedetailspage"/>
         </methods>
       </class> <!-- com.securisk.testcases.Tc_SendRfq -->
+>>>>>>> 17a2053aeb4aad8c619e59a11f540085e9858084
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

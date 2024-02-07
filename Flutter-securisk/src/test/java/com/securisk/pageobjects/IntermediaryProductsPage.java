@@ -1,5 +1,7 @@
 package com.securisk.pageobjects;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -51,6 +53,8 @@ public class IntermediaryProductsPage {
 	public WebElement AddBtn;
 	@FindBy(css = "flt-semantics[aria-label='Coverage Added Successfully']")
 	public WebElement ConfirmAddCoverage;
+	@FindBy(css = "flt-semantics[aria-label='Error']")
+	public WebElement ErrorMessage;
 	@FindBy(css = "flt-semantics[aria-label='Delete']")
 	public WebElement DeleteProductBtn;
 	@FindBy(css = "flt-semantics[aria-label='Yes']")
@@ -120,8 +124,11 @@ public class IntermediaryProductsPage {
 	}
 	public boolean coverageAdded() {
 		return (ConfirmAddCoverage.isDisplayed());
-
 	}
+	public boolean ConfirmCoverage() {
+		return (ErrorMessage.isDisplayed());
+	}
+
 
 	public void closePopUP() {
 		ClosePopupbtn.isEnabled();
@@ -152,10 +159,16 @@ public class IntermediaryProductsPage {
 		AddCoverageBtn.click();
 	}
 
-	public void enterCoverageName(String Coveragename) throws InterruptedException {
+	public void enterCoverageName(String Coveragename) throws Exception {
+		AddCoverageBtn.isDisplayed();
+		AddCoverageBtn.click();
+		Robot r = new Robot();
+		Thread.sleep(2000);
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
+		Thread.sleep(2000);
 		EnterCoverageField.isEnabled();
 		EnterCoverageField.sendKeys(Coveragename);
-		Thread.sleep(3000);
 	}
 
 	public void clickOnAddBtn() {
@@ -194,6 +207,8 @@ public class IntermediaryProductsPage {
 	}
 	public void updateProductName(String name) {
 		EditProductnameField.isEnabled();
+		EditProductnameField.click();
+		EditProductnameField.clear();
 		EditProductnameField.sendKeys(name);
 	}
 	
