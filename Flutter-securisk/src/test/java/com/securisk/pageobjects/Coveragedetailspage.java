@@ -21,7 +21,7 @@ public class Coveragedetailspage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// @FindBy(css ="#flt-semantic-node-449")
+	 //@FindBy(css ="flt-semantics[aria-label='-----Policy Type-----']")
 	@FindBy(xpath = "//*[@aria-label='-----Policy Type-----']")
 	public WebElement clickonPloicyType;
 
@@ -156,7 +156,7 @@ public class Coveragedetailspage {
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 
 		js.executeScript("arguments[0].scrollIntoView();", Clickonnextbutton);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		js.executeScript("arguments[0].click()", Clickonnextbutton);
 

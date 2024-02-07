@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.securisk.testcases.Tc_Policyterms">
+      <class name="com.securisk.testcases.Tc_SendRfq">
         <methods>
           <include name="setup"/>
-          <include name="coveragedetailspage"/>
           <include name="PolicytermsPage"/>
           <include name="createrfq"/>
           <include name="teardown"/>
+          <include name="coveragedetailspage"/>
         </methods>
-      </class> <!-- com.securisk.testcases.Tc_Policyterms -->
+      </class> <!-- com.securisk.testcases.Tc_SendRfq -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
