@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryProductsPage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 
-public class IntermediaryAddProductTest extends Baseclass{
+public class IntermediaryAddProductTest extends BaseClass{
 
 	public IntermediaryAddProductTest() {
 		super(driver, wait);
@@ -25,6 +25,7 @@ public class IntermediaryAddProductTest extends Baseclass{
 			test = reports.startTest("AddProduct With Valid Data");
 			WaitUntilElementVisible(ip.IntermediaryDropdown);
 			ip.clickOnIntermediary();
+			WaitUntilElementVisible(ip.ProductsButton);
 			ip.clickOnProducts();
 			test.log(LogStatus.PASS, "Products Selected");
 			ip.clickOnCreateProduct();
@@ -67,9 +68,10 @@ public class IntermediaryAddProductTest extends Baseclass{
 			String path =rc.ScreenshotPath("Add product");
 			try {
 				Assert.assertEquals(true, ip.productAdded());
-				test.log(LogStatus.PASS,test.addScreenCapture(path)+ "Add Product scucessfull");
+				test.log(LogStatus.FAIL,test.addScreenCapture(path)+ "Add Product scucessfull");
 			} catch (Exception e) {
-				test.log(LogStatus.FAIL,test.addScreenCapture(path)+ "Add Product Not scucessfull");
+				
+				test.log(LogStatus.PASS,test.addScreenCapture(path)+ "Add Product Not scucessfull");
 			}
 			
 			WaitUntilElementVisible(ip.ClosePopupbtn);

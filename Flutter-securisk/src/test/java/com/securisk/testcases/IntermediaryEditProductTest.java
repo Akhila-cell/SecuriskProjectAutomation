@@ -5,22 +5,17 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryProductsPage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 
-public class IntermediaryEditProductTest extends Baseclass {
+
+public class IntermediaryEditProductTest extends IntemediaryAddCoverageTest {
+
 	
-	public IntermediaryEditProductTest() {
-		super(driver, wait);
-	}
-
-	@Test(priority = 2)
+	@Test(priority = 6)
 	public void editProduct() throws Exception {
 		IntermediaryProductsPage ip= new IntermediaryProductsPage(driver);
 		Reusablemethods rc = new Reusablemethods(driver);
-		Tc_LoginPage tc= new Tc_LoginPage();
-		tc.launch();
-		startReport("IntermediaryEditProduct");
 		test = reports.startTest("Edit Product");
 		WaitUntilElementVisible(ip.IntermediaryDropdown);
 		ip.clickOnIntermediary();

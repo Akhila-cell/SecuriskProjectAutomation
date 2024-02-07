@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.Loginpage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
-public class Tc_LoginPage extends Baseclass {
+public class Tc_LoginPage extends BaseClass {
 
 	public Tc_LoginPage() {
 		super(driver, wait);
@@ -41,7 +41,7 @@ public class Tc_LoginPage extends Baseclass {
 			boolean actual=Lp.FinalLoginbutton.isDisplayed();
 			 Assert.assertEquals(true, actual);
 			 test.log(LogStatus.PASS, "loginpage validate successfully");
-			 //rm1.Screenshot(driver, "Loginpage123");
+			 //Srm1.Screenshot(driver, "Loginpage123");
 			
 			}catch (Exception e) {
 			System.out.println(e.getMessage());

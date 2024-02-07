@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.CorpporateDetailspage;
 import com.securisk.pageobjects.Coveragedetailspage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 public class Tc_CorporateDetails extends Tc_RfqPage {
 
@@ -19,7 +19,7 @@ public class Tc_CorporateDetails extends Tc_RfqPage {
 		test = reports.startTest("Verify the corporatedetails page");
 		test.log(LogStatus.PASS, "Enter name of insured ");
 		CRFQ.createNameofInsured("Akhila");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		test.log(LogStatus.PASS, "Enter intermediaryname ");
 		CRFQ.EnterIntermediaryName("Securisk");
 		Thread.sleep(2000);
