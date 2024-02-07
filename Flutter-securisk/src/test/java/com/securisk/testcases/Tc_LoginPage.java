@@ -41,7 +41,7 @@ public class Tc_LoginPage extends Baseclass {
 			boolean actual=Lp.FinalLoginbutton.isDisplayed();
 			 Assert.assertEquals(true, actual);
 			 test.log(LogStatus.PASS, "loginpage validate successfully");
-			 //rm1.Screenshot(driver, "Loginpage123");
+			 //Srm1.Screenshot(driver, "Loginpage123");
 			
 			}catch (Exception e) {
 			System.out.println(e.getMessage());

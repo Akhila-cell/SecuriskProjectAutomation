@@ -19,7 +19,7 @@ public class Tc_CorporateDetails extends Tc_RfqPage {
 		test = reports.startTest("Verify the corporatedetails page");
 		test.log(LogStatus.PASS, "Enter name of insured ");
 		CRFQ.createNameofInsured("Akhila");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		test.log(LogStatus.PASS, "Enter intermediaryname ");
 		CRFQ.EnterIntermediaryName("Securisk");
 		Thread.sleep(2000);
