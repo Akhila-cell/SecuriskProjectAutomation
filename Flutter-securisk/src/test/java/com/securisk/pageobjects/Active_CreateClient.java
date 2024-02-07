@@ -1,11 +1,13 @@
-package com.PageElements;
+package com.securisk.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.Utilities.genericMethods;
+import com.securisk.utilities.genericMethods;
+
+
 
 public class Active_CreateClient {
 	WebDriver driver;
