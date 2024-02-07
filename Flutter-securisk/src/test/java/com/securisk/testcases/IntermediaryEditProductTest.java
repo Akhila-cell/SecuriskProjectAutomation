@@ -8,8 +8,9 @@ import com.securisk.pageobjects.IntermediaryProductsPage;
 import com.securisk.utilities.Reusablemethods;
 
 
+
 public class IntermediaryEditProductTest extends IntemediaryAddCoverageTest {
-	
+
 	
 	@Test(priority = 6)
 	public void editProduct() throws Exception {

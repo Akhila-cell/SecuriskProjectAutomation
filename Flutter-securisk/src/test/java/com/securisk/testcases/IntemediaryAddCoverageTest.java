@@ -9,9 +9,8 @@ import com.securisk.utilities.Reusablemethods;
 
 
 
-public class IntemediaryAddCoverageTest extends IntermediaryAddProductTest {
 
-	
+public class IntemediaryAddCoverageTest extends IntermediaryAddProductTest {
 	@Test(priority = 4)
 	public void addCoverage() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);

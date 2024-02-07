@@ -1,5 +1,6 @@
 package com.securisk.testcases;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,7 +8,8 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryTpaPageElements;
 import com.securisk.utilities.Reusablemethods;
 
-public class IntermediaryCreateTpaTest  extends Baseclass{
+public class IntermediaryCreateTpaTest  extends BaseClass{
+
 
 	public IntermediaryCreateTpaTest() {
 		super(driver, wait);

@@ -9,6 +9,7 @@ import com.securisk.pageobjects.IntermediaryProductsPage;
 import com.securisk.utilities.Reusablemethods;
 
 
+
 public class IntermediaryDeleteProductTest extends IntermediaryEditProductTest {
 
 	@Test(priority = 7)
