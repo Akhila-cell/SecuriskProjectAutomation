@@ -6,24 +6,16 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryProductsPage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 
-public class IntermediaryDeleteProductTest extends Baseclass {
+public class IntermediaryDeleteProductTest extends IntermediaryEditProductTest {
 
-	
-	public IntermediaryDeleteProductTest() {
-		super(driver, wait);
-	}
-
-	@Test(priority = 2)
+	@Test(priority = 7)
 
 	public void deleteProduct() throws IOException, Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
-		Tc_LoginPage tc= new Tc_LoginPage();
-		tc.launch();
 		IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
-		startReport("IntermediaryDeleteProduct");
 		test = reports.startTest("Delete Product");
 		WaitUntilElementVisible(ip.IntermediaryDropdown);
 		ip.clickOnIntermediary();

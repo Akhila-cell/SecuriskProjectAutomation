@@ -5,23 +5,17 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryProductsPage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 
 
-public class IntemediaryAddCoverageTest extends Baseclass {
+public class IntemediaryAddCoverageTest extends IntermediaryAddProductTest {
 
-	public IntemediaryAddCoverageTest() {
-		super(driver, wait);
-	}
-
-	@Test(priority = 2)
+	
+	@Test(priority = 4)
 	public void addCoverage() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 		IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
-		Tc_LoginPage tc= new Tc_LoginPage();
-		tc.launch();
-		startReport("Intermediary Addcoverage");
 		test = reports.startTest("AddCoverage With Valid Data");
 		WaitUntilElementVisible(ip.IntermediaryDropdown);
 		ip.clickOnIntermediary();
@@ -50,7 +44,7 @@ public class IntemediaryAddCoverageTest extends Baseclass {
 		endReport();
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 5)
 	public void addCoverageWithInvalidata() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 		IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
@@ -66,15 +60,14 @@ public class IntemediaryAddCoverageTest extends Baseclass {
 		ip.clickOnAddBtn();
 		WaitUntilElementVisible(ip.OkBtn);
 		try {
-			Assert.assertEquals(true, ip.coverageAdded());
+			Assert.assertEquals(false, ip.ConfirmCoverage());
 			String path =rc.ScreenshotPath("Add coverage");
 			test.log(LogStatus.PASS,test.addScreenCapture(path) +"Coverage Added Scucessfully");
-			ip.clickonOkBtn();
 		} catch (Exception e) {
 			String path =rc.ScreenshotPath("Add coverage");
 			test.log(LogStatus.FAIL,test.addScreenCapture(path) +"Coverage Added Scucessfully");
-			ip.clickonOkBtn();
 		}
+		WaitUntilElementVisible(ip.OkBtn);
 		ip.clickonOkBtn();
 		endReport();
 	

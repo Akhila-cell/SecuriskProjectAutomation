@@ -3,7 +3,7 @@ package com.securisk.testcases;
 import org.testng.annotations.Test;
 
 import com.securisk.pageobjects.Coveragedetailspage;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
 
 public class Tc_Coveragedetails extends Tc_CorporateDetails{
 	

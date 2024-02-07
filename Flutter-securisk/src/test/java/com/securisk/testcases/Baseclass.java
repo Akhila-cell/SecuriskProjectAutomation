@@ -50,7 +50,7 @@ public class Baseclass {
 		op.addArguments("--remote-allow-origin=*");
 		driver = new ChromeDriver(op);
 		driver.get(url);
-		System.out.println("Browser Launched");
+//		System.out.println("Browser Launched");
 		driver.manage().window().maximize();
 
 		Thread.sleep(3000);
