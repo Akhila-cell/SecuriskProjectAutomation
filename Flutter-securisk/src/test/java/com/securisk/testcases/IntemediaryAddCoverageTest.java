@@ -9,7 +9,7 @@ import com.securisk.pageobjects.Reusablemethods;
 
 
 
-public class IntemediaryAddCoverageTest extends Baseclass {
+public class IntemediaryAddCoverageTest extends BaseClass {
 
 	public IntemediaryAddCoverageTest() {
 		super(driver, wait);

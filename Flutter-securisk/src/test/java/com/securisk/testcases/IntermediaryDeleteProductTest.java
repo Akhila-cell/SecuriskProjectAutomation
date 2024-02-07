@@ -9,7 +9,7 @@ import com.securisk.pageobjects.IntermediaryProductsPage;
 import com.securisk.pageobjects.Reusablemethods;
 
 
-public class IntermediaryDeleteProductTest extends Baseclass {
+public class IntermediaryDeleteProductTest extends BaseClass {
 
 	
 	public IntermediaryDeleteProductTest() {
@@ -20,8 +20,6 @@ public class IntermediaryDeleteProductTest extends Baseclass {
 
 	public void deleteProduct() throws IOException, Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
-		Tc_LoginPage tc= new Tc_LoginPage();
-		tc.launch();
 		IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
 		startReport("IntermediaryDeleteProduct");
 		test = reports.startTest("Delete Product");

@@ -8,7 +8,7 @@ import com.securisk.pageobjects.IntermediaryProductsPage;
 import com.securisk.pageobjects.Reusablemethods;
 
 
-public class IntermediaryAddProductTest extends Baseclass{
+public class IntermediaryAddProductTest extends BaseClass{
 
 	public IntermediaryAddProductTest() {
 		super(driver, wait);
