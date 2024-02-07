@@ -1,6 +1,6 @@
 package com.securisk.testcases;
 
-public class IntermediaryCreateTpaTest  extends Baseclass{
+public class IntermediaryCreateTpaTest  extends BaseClass{
 
 	public IntermediaryCreateTpaTest() {
 		super(driver, wait);
