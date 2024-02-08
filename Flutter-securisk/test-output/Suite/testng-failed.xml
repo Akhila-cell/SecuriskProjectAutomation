@@ -3,28 +3,21 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.securisk.testcases.IntermediaryDeleteProductTest">
-        <methods>
-          <include name="editProduct"/>
-          <include name="setup"/>
-          <include name="deleteProduct"/>
-          <include name="teardown"/>
-          <include name="addCoverageWithInvalidata"/>
-        </methods>
-      </class> <!-- com.securisk.testcases.IntermediaryDeleteProductTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
       <class name="com.securisk.testcases.IntermediaryDeleteTpa">
         <methods>
-          <include name="editTpa"/>
           <include name="setup"/>
+          <include name="addProductWithInvalid"/>
+          <include name="editTpa"/>
+          <include name="editProduct"/>
+          <include name="addCoverage"/>
+          <include name="deleteProduct"/>
           <include name="createTpa"/>
           <include name="DeleteTpa"/>
           <include name="teardown"/>
+          <include name="addCoverageWithInvalidata"/>
+          <include name="addProduct"/>
         </methods>
       </class> <!-- com.securisk.testcases.IntermediaryDeleteTpa -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

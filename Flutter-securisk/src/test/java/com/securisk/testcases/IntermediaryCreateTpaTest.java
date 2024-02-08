@@ -8,21 +8,16 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryTpaPageElements;
 import com.securisk.utilities.Reusablemethods;
 
-public class IntermediaryCreateTpaTest  extends BaseClass{
+public class IntermediaryCreateTpaTest  extends IntermediaryDeleteProductTest{
 
-
-	public IntermediaryCreateTpaTest() {
-		super(driver, wait);
-		
-	}
 	
-	@Test(priority = 1)
+	@Test(priority = 8)
 	
 	public void createTpa() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 //		Tc_LoginPage tc= new Tc_LoginPage();
 //		tc.launch();
-		startReport("CreateTpa");
+//		startReport("CreateTpa");
 		IntermediaryTpaPageElements tp = new IntermediaryTpaPageElements(driver);
 		test = reports.startTest("AddTpa With Valid Data");
 		WaitUntilElementVisible(tp.IntermediaryDropdown);

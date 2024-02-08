@@ -9,7 +9,7 @@ import com.securisk.utilities.Reusablemethods;
 
 public class IntermediaryDeleteTpa extends IntermediaryEditTpa {
 
-	@Test(priority = 3)
+	@Test(priority = 10)
 	public void DeleteTpa() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 		IntermediaryTpaPageElements tp = new IntermediaryTpaPageElements(driver);

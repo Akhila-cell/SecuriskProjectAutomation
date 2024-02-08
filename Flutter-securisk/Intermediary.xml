@@ -3,12 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.securisk.testcases.IntermediaryDeleteProductTest"/>
-    </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="Test1">
-    <classes>
-      <class name="com.securisk.testcases.IntermediaryDeleteTpa"/>
+     <class name="com.securisk.testcases.IntermediaryDeleteTpa"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
