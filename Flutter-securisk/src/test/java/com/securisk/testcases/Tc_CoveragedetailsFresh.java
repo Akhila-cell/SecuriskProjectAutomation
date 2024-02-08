@@ -2,16 +2,18 @@ package com.securisk.testcases;
 
 import org.testng.annotations.Test;
 
-import com.securisk.pageobjects.Coveragedetailspage;
+import com.securisk.pageobjects.Coveragedetailspage_Fresh;
 import com.securisk.utilities.Reusablemethods;
 
-public class Tc_Coveragedetails extends Tc_CorporateDetails{
-	
+
+
+public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
+
 	@Test(priority = 4)
-	public void coveragedetailspage() throws Exception
-	{
+	public void coveragedetailspage() throws Exception {
 		Reusablemethods Rm = new Reusablemethods(driver);
-		Coveragedetailspage cd = new Coveragedetailspage(driver);
+		Coveragedetailspage_Fresh cd = new Coveragedetailspage_Fresh(driver);
+		test = reports.startTest("Verify the coveragedetails page");
 		Thread.sleep(5000);
 		cd.clickOnPolicyType();
 		Thread.sleep(3000);
@@ -24,7 +26,9 @@ public class Tc_Coveragedetails extends Tc_CorporateDetails{
 		cd.sumInsured_Click();
 		Thread.sleep(3000);
 		cd.sumInsured_Varied();
+		endReport();
 		Thread.sleep(2000);
+		test = reports.startTest("Verify the corporatedetails page");
 		cd.select_Fd();
 		Thread.sleep(2000);
 		cd.Enter_SI("50000");
@@ -39,11 +43,10 @@ public class Tc_Coveragedetails extends Tc_CorporateDetails{
 		Thread.sleep(10000);
 		cd.clickoneyeicon();
 		Rm.Screenshot(driver, "Securisk_Employeedependentdata1");
-		//cd.Clickonfirstcheckbox();
+		// cd.Clickonfirstcheckbox();
 		Thread.sleep(2000);
 		cd.nextbutton_Coveagedetails();
-		
-	
+
 	}
 
 }

@@ -4,14 +4,14 @@ import java.awt.AWTException;
 
 import org.testng.annotations.Test;
 
-import com.securisk.pageobjects.policyTermspage;
+import com.securisk.pageobjects.PolicyTermspage_Fresh;
 
-public class Tc_Policyterms extends Tc_Coveragedetails {
+public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 	
 	@Test(priority = 5)
 	public void PolicytermsPage() throws InterruptedException, AWTException
 	{
-		policyTermspage pt = new policyTermspage(driver);
+		PolicyTermspage_Fresh pt = new PolicyTermspage_Fresh(driver);
 		pt.clickonEditButton();
 		Thread.sleep(2000);
 		

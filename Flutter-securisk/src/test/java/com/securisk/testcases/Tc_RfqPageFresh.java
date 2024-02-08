@@ -6,16 +6,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
-import com.securisk.pageobjects.CorpporateDetailspage;
-import com.securisk.pageobjects.RfqPage;
+import com.securisk.pageobjects.CorpporateDetailspage_Fresh;
+import com.securisk.pageobjects.RfqPage_Fresh;
 import com.securisk.utilities.Reusablemethods;
 
-public class Tc_RfqPage extends Tc_LoginPage{
+public class Tc_RfqPageFresh extends Tc_LoginPage{
 	@Test(priority = 2)
 	public void rfqTestcase() throws InterruptedException, IOException {
 	Reusablemethods Rm = new Reusablemethods(driver);
-	CorpporateDetailspage CRFQ =new CorpporateDetailspage(driver);
-	RfqPage RP =new RfqPage(driver);
+	CorpporateDetailspage_Fresh CRFQ =new CorpporateDetailspage_Fresh(driver);
+	RfqPage_Fresh RP =new RfqPage_Fresh(driver);
 	Thread.sleep(2000);
 	test=reports.startTest("Verify the Rfq button");
 	RP.Rfq();

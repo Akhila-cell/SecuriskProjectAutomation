@@ -4,18 +4,21 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
-import com.securisk.pageobjects.CorpporateDetailspage;
-import com.securisk.pageobjects.Coveragedetailspage;
+
+import com.securisk.pageobjects.CorpporateDetailspage_Fresh;
+import com.securisk.pageobjects.Coveragedetailspage_Fresh;
+
 import com.securisk.utilities.Reusablemethods;
 
-public class Tc_CorporateDetails extends Tc_RfqPage {
+
+public class Tc_CorporateDetailsFresh extends Tc_RfqPageFresh {
 
 	@Test(priority = 3)
 	public void createrfq() throws InterruptedException, Throwable {
 
 		Reusablemethods Rm = new Reusablemethods(driver);
-		CorpporateDetailspage CRFQ = new CorpporateDetailspage(driver);
-		Coveragedetailspage cd = new Coveragedetailspage(driver);
+		CorpporateDetailspage_Fresh CRFQ = new CorpporateDetailspage_Fresh(driver);
+		Coveragedetailspage_Fresh cd = new Coveragedetailspage_Fresh(driver);
 		test = reports.startTest("Verify the corporatedetails page");
 		test.log(LogStatus.PASS, "Enter name of insured ");
 		CRFQ.createNameofInsured("Akhila");

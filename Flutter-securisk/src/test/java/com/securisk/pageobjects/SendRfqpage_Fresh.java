@@ -9,11 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SendRfqpage {
+public class SendRfqpage_Fresh {
 	
 WebDriver driver;
 	
-	public SendRfqpage(WebDriver driver) {
+	public SendRfqpage_Fresh(WebDriver driver) {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
