@@ -9,11 +9,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class policyTermspage {
+public class PolicyTermspage_Fresh {
 
 	WebDriver driver;
 
-	public policyTermspage(WebDriver driver) {
+	public PolicyTermspage_Fresh(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

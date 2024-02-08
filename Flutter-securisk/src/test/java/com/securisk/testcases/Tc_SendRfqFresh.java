@@ -4,14 +4,14 @@ import java.awt.AWTException;
 
 import org.testng.annotations.Test;
 
-import com.securisk.pageobjects.SendRfqpage;
+import com.securisk.pageobjects.SendRfqpage_Fresh;
 
-public class Tc_SendRfq  extends Tc_Policyterms {
+public class Tc_SendRfqFresh  extends Tc_PolicytermsFresh {
 	
 	@Test(priority = 6)
 	public void coveragedetailspage() throws InterruptedException, AWTException
 	{
-		SendRfqpage SRFQ = new SendRfqpage(driver);
+		SendRfqpage_Fresh SRFQ = new SendRfqpage_Fresh(driver);
 		WaitUntilElementVisible(SRFQ.clickon_EmployeeDepedent);
 		SRFQ.clickonEmployeeDepedent();
 		WaitUntilElementVisible(SRFQ.clickon_SendEmail);

@@ -2,16 +2,15 @@ package com.securisk.testcases;
 
 import org.testng.annotations.Test;
 
-import com.securisk.pageobjects.Coveragedetailspage;
+import com.securisk.pageobjects.Coveragedetailspage_Fresh;
 import com.securisk.pageobjects.Reusablemethods;
 
-public class Tc_Coveragedetails extends Tc_CorporateDetails{
-	
+public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
+
 	@Test(priority = 4)
-	public void coveragedetailspage() throws Exception
-	{
+	public void coveragedetailspage() throws Exception {
 		Reusablemethods Rm = new Reusablemethods(driver);
-		Coveragedetailspage cd = new Coveragedetailspage(driver);
+		Coveragedetailspage_Fresh cd = new Coveragedetailspage_Fresh(driver);
 		Thread.sleep(5000);
 		cd.clickOnPolicyType();
 		Thread.sleep(3000);
@@ -39,11 +38,10 @@ public class Tc_Coveragedetails extends Tc_CorporateDetails{
 		Thread.sleep(10000);
 		cd.clickoneyeicon();
 		Rm.Screenshot(driver, "Securisk_Employeedependentdata1");
-		//cd.Clickonfirstcheckbox();
+		// cd.Clickonfirstcheckbox();
 		Thread.sleep(2000);
 		cd.nextbutton_Coveagedetails();
-		
-	
+
 	}
 
 }
