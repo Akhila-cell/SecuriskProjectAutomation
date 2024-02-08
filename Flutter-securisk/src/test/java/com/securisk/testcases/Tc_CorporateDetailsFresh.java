@@ -4,9 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
+
 import com.securisk.pageobjects.CorpporateDetailspage_Fresh;
 import com.securisk.pageobjects.Coveragedetailspage_Fresh;
-import com.securisk.pageobjects.Reusablemethods;
+
+import com.securisk.utilities.Reusablemethods;
+
 
 public class Tc_CorporateDetailsFresh extends Tc_RfqPageFresh {
 

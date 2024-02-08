@@ -1,4 +1,4 @@
-package com.securisk.pageobjects;
+package com.securisk.utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -52,7 +52,7 @@ public class Reusablemethods {
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		File trg=new File("./Screenshots"+Screenname+".png");
 		Files.copy(src, trg);
-		System.out.println("Screenshot captured successfully");
+//		System.out.println("Screenshot captured successfully");
 	}
  
 	public String ScreenshotPath(String filename) throws IOException {

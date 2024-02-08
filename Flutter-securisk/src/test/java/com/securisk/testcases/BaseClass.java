@@ -16,12 +16,12 @@ import org.testng.annotations.BeforeSuite;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.securisk.utilities.Readconfig;
+import com.securisk.utilities.ReadConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Baseclass {
-	Readconfig Rc = new Readconfig();
+public class BaseClass {
+	ReadConfig Rc = new ReadConfig();
 	public String url = Rc.AppURL();
 	public String username = Rc.EnterUser();
 	public String pwd = Rc.EnterPwd();
@@ -30,9 +30,9 @@ public class Baseclass {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 
-	public Baseclass(WebDriver driver, WebDriverWait wait) {
-		Baseclass.driver = driver;
-		Baseclass.wait = wait;
+	public BaseClass(WebDriver driver, WebDriverWait wait) {
+		BaseClass.driver = driver;
+		BaseClass.wait = wait;
 	}
 
 	public void WaitUntilElementVisible(WebElement element) {
@@ -50,7 +50,7 @@ public class Baseclass {
 		op.addArguments("--remote-allow-origin=*");
 		driver = new ChromeDriver(op);
 		driver.get(url);
-		System.out.println("Browser Launched");
+//		System.out.println("Browser Launched");
 		driver.manage().window().maximize();
 
 		Thread.sleep(3000);

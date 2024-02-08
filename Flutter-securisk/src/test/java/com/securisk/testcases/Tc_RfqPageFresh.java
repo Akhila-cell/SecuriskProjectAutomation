@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.CorpporateDetailspage_Fresh;
-import com.securisk.pageobjects.Reusablemethods;
 import com.securisk.pageobjects.RfqPage_Fresh;
+import com.securisk.utilities.Reusablemethods;
 
 public class Tc_RfqPageFresh extends Tc_LoginPage{
 	@Test(priority = 2)

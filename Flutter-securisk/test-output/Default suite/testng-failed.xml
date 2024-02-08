@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.securisk.testcases.Tc_SendRfq">
+      <class name="com.securisk.testcases.IntermediaryDeleteTpa">
         <methods>
           <include name="setup"/>
-          <include name="PolicytermsPage"/>
-          <include name="createrfq"/>
+          <include name="editTpa"/>
+          <include name="createTpa"/>
           <include name="teardown"/>
-          <include name="coveragedetailspage"/>
         </methods>
-      </class> <!-- com.securisk.testcases.Tc_SendRfq -->
+      </class> <!-- com.securisk.testcases.IntermediaryDeleteTpa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

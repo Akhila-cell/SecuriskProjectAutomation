@@ -3,7 +3,9 @@ package com.securisk.testcases;
 import org.testng.annotations.Test;
 
 import com.securisk.pageobjects.Coveragedetailspage_Fresh;
-import com.securisk.pageobjects.Reusablemethods;
+import com.securisk.utilities.Reusablemethods;
+
+
 
 public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
 
@@ -11,6 +13,7 @@ public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
 	public void coveragedetailspage() throws Exception {
 		Reusablemethods Rm = new Reusablemethods(driver);
 		Coveragedetailspage_Fresh cd = new Coveragedetailspage_Fresh(driver);
+		test = reports.startTest("Verify the coveragedetails page");
 		Thread.sleep(5000);
 		cd.clickOnPolicyType();
 		Thread.sleep(3000);
@@ -23,7 +26,9 @@ public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
 		cd.sumInsured_Click();
 		Thread.sleep(3000);
 		cd.sumInsured_Varied();
+		endReport();
 		Thread.sleep(2000);
+		test = reports.startTest("Verify the corporatedetails page");
 		cd.select_Fd();
 		Thread.sleep(2000);
 		cd.Enter_SI("50000");
