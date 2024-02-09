@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.securisk.utilities.genericMethods;
 
-
-
 public class Active_CreateClient {
 	WebDriver driver;
 
@@ -18,7 +16,25 @@ public class Active_CreateClient {
 	}
 
 	genericMethods gs = new genericMethods();
-                                                                                     //Create Client
+
+	@FindBy(xpath = "//flt-semantics[contains(@aria-label,'Client List')]")
+	public WebElement ClientList;
+
+	public void dropdownClient() {
+		// ClientList.isEnabled();
+		ClientList.click();
+
+	}
+
+	@FindBy(css = "flt-semantics[aria-label='Active']")
+	public WebElement ActiveOption;
+
+	public void ActuveOp() {
+		ActiveOption.click();
+
+	}
+
+	// Create Client
 	@FindBy(css = "flt-semantics[aria-label='Create Client']")
 	WebElement CreateClient;
 
@@ -30,10 +46,9 @@ public class Active_CreateClient {
 	WebElement ClientName;
 
 	public void client_Name() {
-		gs.textField(ClientName, "KfinTech");
+		gs.textField(ClientName, "KfinTechTCS");
 
 	}
-
 
 	@FindBy(css = "flt-semantics[aria-label='Location']")
 	WebElement Location;
@@ -42,7 +57,7 @@ public class Active_CreateClient {
 		Location.click();
 	}
 
-	@FindBy(css = "flt-semantics[aria-label='Chennai']")
+	@FindBy(css = "flt-semantics[aria-label=\"Bangalore\"]")
 	WebElement LoctationDrop;
 
 	public void location_Drop_Name() {
@@ -56,7 +71,7 @@ public class Active_CreateClient {
 		Product.click();
 	}
 
-	@FindBy(css = "flt-semantics[aria-label=\"Bulgary & Theft\"]")
+	@FindBy(css = " flt-semantics[aria-label=\"Stationary\"]")
 	WebElement ProductDrop;
 
 	public void product_Drop_Type() {
@@ -83,8 +98,10 @@ public class Active_CreateClient {
 	public void create_Client_Button() {
 		Create.click();
 	}
-                                                                           //Filter Option
-	@FindBy(css = "flt-semantics[aria-label=\"Chennai\"]")
+
+	// Filter Option
+
+	@FindBy(css = "flt-semantics[aria-label=\"Bangalore\"]")
 	WebElement FilterClick;
 
 	public void filter_Click() {
@@ -98,7 +115,8 @@ public class Active_CreateClient {
 		Filter.click();
 
 	}
-                                                                            //Search Option
+
+	// Search Option
 	@FindBy(css = "input[aria-label='Search']")
 	WebElement Search;
 
@@ -106,21 +124,24 @@ public class Active_CreateClient {
 		Search.sendKeys("KfinTech");
 
 	}
-                                                                             //Previous Button
+
+	// Previous Button
 	@FindBy(css = "flt-semantics[aria-label='Previous']")
 	WebElement Previous;
 
 	public void previous_Button() {
 		Previous.click();
 	}
-                                                                            //Next Button
+
+	// Next Button
 	@FindBy(css = "flt-semantics[aria-label='Next']")
 	WebElement Next;
 
 	public void next_Button() {
 		Next.click();
 	}
-                                                                            //Show Products
+
+	// Show Products
 	@FindBy(xpath = "(//flt-semantics[@aria-label='Show menu'])[2]")
 	WebElement ShowMenuDots;
 
@@ -141,7 +162,8 @@ public class Active_CreateClient {
 	public void close_Button() {
 		CloseButton.click();
 	}
-                                                                           //Add Product
+
+	// Add Product
 	@FindBy(css = "flt-semantics[aria-label=\"Add Product\"]")
 	WebElement AddProduct;
 
@@ -156,7 +178,7 @@ public class Active_CreateClient {
 		ProductType.click();
 	}
 
-	@FindBy(css = "flt-semantics[aria-label=\"Clinical Trial Liability\"]")
+	@FindBy(xpath = "(//*[@aria-label=\"new product (a)\"])[3]")
 	WebElement CovidPolicy;
 
 	public void covid_Policy() {
@@ -190,7 +212,8 @@ public class Active_CreateClient {
 	public void product_Close() {
 		ProductClose.click();
 	}
-                                                                        //Add User
+
+	// Add User
 	@FindBy(xpath = "//*[@aria-label='Add User']")
 	WebElement AddUser;
 
@@ -257,101 +280,194 @@ public class Active_CreateClient {
 	public void close_User() {
 		CloseUser.click();
 	}
-	                                                              //Delete Product
-	@FindBy(xpath="//*[@aria-label='7']")
+
+	                                          // Delete Product
+	
+	@FindBy(css="flt-semantics[aria-label=\"9\"]")
+	WebElement DeleteProduct;
+	public void deleteProduct() {
+		DeleteProduct.click();
+	}
+	@FindBy(xpath = "(//*[@aria-label=\"Show menu\"])[1]")
 	WebElement ProductNo;
+
 	public void product_No() {
 		ProductNo.click();
 	}
+
 	
-	@FindBy(xpath="(//*[@aria-label=\"Show menu\"])[6]")
-	WebElement ProductDots;
-	public void product_Dots() {
-		ProductDots.click();
-	}
-	@FindBy(xpath="//*[@aria-label=\"Delete\"]")
+
+	@FindBy(css= " flt-semantics[aria-label=\"Delete\"]")
 	WebElement Delete_Product;
+
 	public void delete_Product() {
 		Delete_Product.click();
 	}
-	@FindBy(xpath="//*[@aria-label='Yes']")
+
+	@FindBy(css = " flt-semantics[aria-label=\"Yes\"]")
 	WebElement Delete_Yes;
-	public void  delete_Yes() {
-		 Delete_Yes.click();
+
+	public void delete_Yes() {
+		Delete_Yes.click();
 	}
-	
-	                                                              //delete User
-	@FindBy(xpath="//*[@aria-label=\"4\"]")
+
+	@FindBy(css = " flt-semantics[aria-label=\"OK\"]")
+	WebElement ProuductDelete_ok;
+
+	public void prouductDelete_ok() {
+		ProuductDelete_ok.click();
+	}
+
+	                                                        // delete User
+	@FindBy(css = "flt-semantics[aria-label=\"8\"]")
 	WebElement AddedUserNo;
-	public void addedUserNo() {
+
+	public void addedUserNo1() {
 		AddedUserNo.click();
 	}
-	@FindBy(xpath="(//*[@aria-label=\"Show menu\"])[4]")
+
+	@FindBy(xpath = "(// flt-semantics[@aria-label=\"Show menu\"])[1]")
 	WebElement AddedUserNo_Dots;
+
 	public void addedUserNo_Dots() {
 		AddedUserNo_Dots.click();
 	}
-	@FindBy(xpath="//*[@aria-label=\"Delete\"]")
+
+	@FindBy(css = " flt-semantics[aria-label=\"Delete\"]")
 	WebElement DeleteUser;
-	public void  deleteUser() {
-		 DeleteUser.click();
+
+	public void deleteUser() {
+		DeleteUser.click();
 	}
-	@FindBy(xpath="//*[@aria-label='Yes']")
+
+	@FindBy(css = "flt-semantics[aria-label=\"Yes\"]")
 	WebElement Deletete_User_Yes;
+
 	public void deletete_User_Yes() {
 		Deletete_User_Yes.click();
 	}
-	@FindBy(css="flt-semantics[aria-label=\"OK\"]")
+
+	@FindBy(css = " flt-semantics[aria-label=\"OK\"]")
 	WebElement Delete_User_Yes_Click;
-	
+
 	public void deletete_User_Yes_Click() {
 		Delete_User_Yes_Click.click();
-	}
-	@FindBy(css=" flt-semantics[aria-label=\"Edit\"]")
+	}                                                             //EDIT
+    @FindBy(css="flt-semantics[aria-label=\"Edit\"]")
+    WebElement EditClick;
+    public void editClick() {
+	EditClick.click();
+}
+	@FindBy(xpath= "//*[@aria-label='Client Name']")
 	WebElement Edit;
-	
-	public void edit_List() {
-		 Edit.click();
-		 Edit.clear();
-		 gs.textField(ClientName, "TCS");
+
+	public void edit_List() throws Exception {
+		Thread.sleep(3000);
+		Edit.click();
 	}
-	
-	@FindBy(css="//*[contains(@aria-label,'Location')]")
+	public void clear() {
+		
+		Edit.clear();
+	}
+	public void newName() {
+		gs.textField(ClientName, "Infosys");
+	}
+
+	@FindBy(xpath = "//*[contains(@aria-label,'Location')]")
 	WebElement New_ClientLoc;
-	
+
 	public void new_ClientLoc() {
 		New_ClientLoc.click();
 	}
-	@FindBy(css=" flt-semantics[aria-label=\"Bangalore\"]")
+
+	@FindBy(css = " flt-semantics[aria-label=\"Bangalore\"]")
 	WebElement LocationName3;
+
 	public void new_Loc() {
+		
 		LocationName3.click();
 	}
-	
-	@FindBy(css=" flt-semantics[aria-label=\"Update\"]")
+
+	@FindBy(css = " flt-semantics[aria-label=\"Update\"]")
 	WebElement Update_Edit;
+
 	public void update_Edit() {
 		Update_Edit.click();
-}}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	}
+	@FindBy(css="flt-semantics[aria-label=\"Close\"]")
+	WebElement Update_Close;
+	public void update_Close() {
+		Update_Close.click();
+	}
 
+	@FindBy(css = "flt-semantics[aria-label=\"LOGIN\"]")
+	WebElement Login;
+
+	public void login() {
+		Login.click();
+
+	}
+	                                                  //Edit user in the create user
+	@FindBy(css="flt-semantics[aria-label=\"Edit\"]")
+	WebElement EditUserButton_userlist;
+	public void editUserButton_userlist() {
+		EditUserButton_userlist.click();
+	}
+	@FindBy(css=" input[aria-label=\"Employee Id\"]")
+	WebElement EMPID;
+	public void empid_user() throws Exception {
+		 Thread.sleep(3000);
+		 EMPID.click();
+		 Thread.sleep(3000);
+		 EMPID.clear();
+		 Thread.sleep(3000);
+		 gs.textField(EmployeeId, "5678944");
+	}
+	@FindBy(css=" input[aria-label=\"Name\"]")
+	WebElement EmpId_User;
+	public void  empId_UserName() throws Exception {
+		 Thread.sleep(3000);
+		 EmployeeName.click();
+		 Thread.sleep(3000);
+		 EmployeeName.clear();
+		 Thread.sleep(3000);
+		 EmployeeName.sendKeys("Babitha");
+		 //gs.textField(EmployeeName, "Babitha");
+	}
+
+	@FindBy(css = "flt-semantics[aria-label=\"CRM Executive\"]")
+	WebElement Designation2;
+
+	public void designation2() {
+		Designation2.click();
+	}
+	@FindBy(css=" input[aria-label=\"Email\"]")
+	WebElement EmailId_User;
+	public void  emailId_User() throws Exception {
+		EmailId_User.click();
+		 Thread.sleep(3000);
+		 EmailId_User.clear();
+		 Thread.sleep(3000);
+		gs.textField(EmailId,"babithamyakala@gmail.com");
+	}
+	@FindBy(css=" input[aria-label=\"Email\"]")
+	WebElement Phone_User;
+	public void  phone_User() throws Exception {
+		 Phone_User.click();
+		 Thread.sleep(3000);
+		 Phone_User.clear();
+		 Thread.sleep(3000);
+		gs.textField(PhoneNumber,"1275489456");
+	}
+	@FindBy(css="flt-semantics[aria-label=\"Submit\"]")
+	WebElement Submit_User;
+	public void submit_User() {
+		Submit_User.click();
+	}
+	@FindBy(xpath="(//*[@aria-label=\"8\"])[2]")
+	WebElement EditUserButton2;
+	public void editUserButton2() {
+		EditUserButton2.click();
+	}
+}

@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.Active_CreateClient;
 import com.securisk.pageobjects.ClientList;
+import com.securisk.pageobjects.Loginpage;
+import com.securisk.utilities.Reusablemethods;
 
 public class CreateClient_Test_SubModules extends BaseClass {
 	public CreateClient_Test_SubModules() {
@@ -16,19 +18,25 @@ public class CreateClient_Test_SubModules extends BaseClass {
 
 	// Login Till FilterOption
 	@Test(priority = 1)
-	public void CreateClient_Active() throws Exception {
+	public void loginApplication() throws Exception {
 
 		Tc_LoginPage lp = new Tc_LoginPage();
 		lp.launch();
+		Thread.sleep(4000);
 
-		ClientList cl = new ClientList(driver);
-		startReport("Test cases for create client");
+		Active_CreateClient cl = new Active_CreateClient(driver);
+		//startReport("Test cases for create client");
+		test = reports.startTest("Create Client");
 		cl.dropdownClient();
 		test.log(LogStatus.PASS, " Client List button Cliecked Successfully");
 		Thread.sleep(4000);
 		cl.ActuveOp();
 		test.log(LogStatus.PASS, "Under Client List Active Sub-Module Clicked Successfully");
 		Thread.sleep(4000);
+	}
+
+	//@Test
+	public void createClient() throws Exception {
 
 		Active_CreateClient aa = new Active_CreateClient(driver);
 		aa.Create_Client();
@@ -62,6 +70,11 @@ public class CreateClient_Test_SubModules extends BaseClass {
 		aa.create_Client_Button();
 		test.log(LogStatus.PASS, " Under Create Client Created Successfully");
 		Thread.sleep(2000);
+	}
+
+	@Test(priority = 2) // Search Options
+	public void search() throws Exception {
+		Active_CreateClient aa = new Active_CreateClient(driver);
 
 		aa.filterOpp();
 		test.log(LogStatus.PASS, " UnderClient List Filter Option clicked Successfully");
@@ -78,10 +91,11 @@ public class CreateClient_Test_SubModules extends BaseClass {
 		// driver.navigate().refresh();
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 3)
 	public void actions() throws Exception { // Show products
-		Active_CreateClient aa = new Active_CreateClient(driver);
 
+		Active_CreateClient aa = new Active_CreateClient(driver);
+		aa.showMenu_Dots();
 		Thread.sleep(6000);
 		aa.showproducts_Option();
 		startReport("Test cases for Show products");
@@ -96,32 +110,30 @@ public class CreateClient_Test_SubModules extends BaseClass {
 
 	}
 
-	@Test(priority = 3) // Add Products
+	//@Test(priority = 4) // Add Products
 	public void showProducts() throws Exception {
 
-		// genericMethods gm = new genericMethods();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		Tc_LoginPage lp = new Tc_LoginPage();
+//		lp.launch();
+//		Thread.sleep(4000);
+//        Active_CreateClient cl = new Active_CreateClient(driver);
+//		startReport("Test cases for create client");
+//		cl.dropdownClient();
+//		test.log(LogStatus.PASS, " Client List button Cliecked Successfully");
+//		Thread.sleep(4000);
+//		cl.ActuveOp();
+//		test.log(LogStatus.PASS, "Under Client List Active Sub-Module Clicked Successfully");
+//		Thread.sleep(4000);
 
 		Active_CreateClient aa = new Active_CreateClient(driver);
-		startReport("Test cases for AddProducts");
-		aa.filterOpp();
-		test.log(LogStatus.PASS, " UnderClient List Filter Option clicked Successfully");
-		Thread.sleep(2000);
 
-		aa.filter_Click();
-		test.log(LogStatus.PASS, " UnderClient List Filter Option Selected Successfully");
-		Thread.sleep(2000);
+		startReport("Test cases for Product");
 
-		aa.searchop();
-		test.log(LogStatus.PASS, " UnderClient Search Option clicked Successfully");
-		Thread.sleep(2000);
-		endReport();
-		
-		startReport("Test cases for AddProducts");
 		aa.showMenu_Dots();
 
 		test.log(LogStatus.PASS, " UnderClient after creating client Showmenu dots Clicked Successfully");
 		Thread.sleep(6000);
+
 		aa.addProduct_Option();
 
 		test.log(LogStatus.PASS, " UnderClient after creating client add products option clicked Successfully");
@@ -157,11 +169,8 @@ public class CreateClient_Test_SubModules extends BaseClass {
 
 	}
 
-	@Test(priority = 4) // Add user
+	//@Test(priority = 5) // Add user
 	public void addUser() throws Exception {
-
-		// genericMethods gm = new genericMethods();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		Active_CreateClient aa = new Active_CreateClient(driver);
 
@@ -219,20 +228,20 @@ public class CreateClient_Test_SubModules extends BaseClass {
 
 	}
 
-	@Test(priority = 5) // Delete Product
+	//@Test(priority =6 ) // Delete Product
 	public void productNumber() throws Exception {
 
-		// genericMethods gm = new genericMethods();
 		Active_CreateClient aa = new Active_CreateClient(driver);
+
 		startReport("Test cases for Delete a Product");
 
-		aa.product_No();
+		aa.deleteProduct();
 		test.log(LogStatus.PASS,
 				" UnderClient in Actions after creation of product and user clicking on product is successfully");
 
 		Thread.sleep(5000);
 
-		aa.product_Dots();
+		aa.product_No();
 		test.log(LogStatus.PASS,
 				" UnderClient in Actions after creation of product and user click on productno then in that dots are selecting is successfully");
 		Thread.sleep(5000);
@@ -241,20 +250,25 @@ public class CreateClient_Test_SubModules extends BaseClass {
 		test.log(LogStatus.PASS,
 				" UnderClient in Actions after creation of product and user product deleting is successfully");
 		Thread.sleep(5000);
+		
 		aa.delete_Yes();
 		test.log(LogStatus.PASS,
 				" UnderClient in Actions after creation of product and user product deleted pop-up clicked  successfully");
 		Thread.sleep(5000);
+		
+		aa.prouductDelete_ok();
+		test.log(LogStatus.PASS, "Product deleted  successfully");
+		Thread.sleep(5000);
 		endReport();
 	}
 
-	@Test(priority = 6) // Delete User
+	//@Test(priority = 7) // Delete User
 	public void userNoClick() throws Exception {
-		// genericMethods gm = new genericMethods();
+	
 		Active_CreateClient aa = new Active_CreateClient(driver);
 		startReport("Test cases for Delete a User");
 
-		aa.addedUserNo();
+		aa.addedUserNo1();
 		test.log(LogStatus.PASS,
 				" UnderClient After Adding user if we want to delete user then user numbers clicked is successfully");
 		Thread.sleep(5000);
@@ -270,24 +284,82 @@ public class CreateClient_Test_SubModules extends BaseClass {
 		Thread.sleep(8000);
 		aa.deletete_User_Yes();
 		test.log(LogStatus.PASS, "user deleted successfully");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
+		
 		aa.deletete_User_Yes_Click();
 		test.log(LogStatus.PASS, "user delete pop-up clicked successfully");
 		endReport();
 
 	}
 
-	@Test(priority = 7)
+	//@Test
 	public void editClient() throws Exception {
 		Active_CreateClient aa = new Active_CreateClient(driver);
-		// test = report.startTest("Test cases for Delete a User");
+
+		startReport("Test cases for AddUser");
+
+		aa.showMenu_Dots();
+		test.log(LogStatus.PASS, "Show dots clicked successfully");
+		Thread.sleep(5000);
+		aa.editClick();
+		test.log(LogStatus.PASS, "Edit button clicked successfully");
+		Thread.sleep(5000);
 		aa.edit_List();
+		
+		test.log(LogStatus.PASS, "Edit list clicked successfully");
+		Thread.sleep(5000);
+		aa.clear();
+		Thread.sleep(5000);
+		aa.newName();
 		Thread.sleep(5000);
 		aa.new_ClientLoc();
+		test.log(LogStatus.PASS, "new client name given successfully");
 		Thread.sleep(5000);
 		aa.new_Loc();
+		test.log(LogStatus.PASS, "new client location given successfully");
 		Thread.sleep(5000);
 		aa.update_Edit();
+		test.log(LogStatus.PASS, "Edit client Updated successfully");
+		
+		Thread.sleep(5000);
+		aa.update_Close();
+		test.log(LogStatus.PASS, "Edit client Updated and closed successfully");
+		endReport();
+		
+	}
+	@Test(priority = 3)
+	public void editUser() throws Exception {
+		Active_CreateClient aa = new Active_CreateClient(driver);
+		startReport("Test cases for Delete a User");
+
+		aa.editUserButton2();
+		test.log(LogStatus.PASS,
+				" UnderClient After Adding user if we want to delete user then user numbers clicked is successfully");
+		Thread.sleep(5000);
+		aa.addedUserNo_Dots();
+		test.log(LogStatus.PASS,
+				" UnderClient After Adding user if we want to delete user then  after clicking on user numbers  dots clicked is successfully");
+
+		Thread.sleep(5000);
+		aa.editUserButton_userlist();
+		test.log(LogStatus.PASS,"Edit user clicked successfully");
+		Thread.sleep(5000);
+		aa.empId_UserName();
+		test.log(LogStatus.PASS,"Edited username entered successfully");
+		Thread.sleep(5000);
+		aa.designation2();
+		test.log(LogStatus.PASS,"Designation entered successfully");
+		Thread.sleep(5000);
+		aa.emailId_User();
+		test.log(LogStatus.PASS,"email clicked and entered successfully");
+		Thread.sleep(5000);
+		aa.phone_User();
+		test.log(LogStatus.PASS,"phone no field  clicked and entered successfully");
+		Thread.sleep(5000);
+		aa.submit_User();
+		test.log(LogStatus.PASS,"edited user submited successfully");
+		
+		
 	}
 
 }
