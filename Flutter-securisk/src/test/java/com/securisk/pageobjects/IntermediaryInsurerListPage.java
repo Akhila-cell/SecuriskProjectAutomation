@@ -43,6 +43,18 @@ public class IntermediaryInsurerListPage {
 	public WebElement PhoneNumberField ;
 	@FindBy(css = "flt-semantics[aria-label='Create']")
 	public WebElement CreateBtn ;
+	@FindBy(css = "input[aria-label='Search']")
+	public WebElement SearchField;
+	@FindBy(css = "flt-semantics[aria-label='DemoInsurer']")
+	public WebElement Userbutton;
+	@FindBy(css = "flt-semantics[aria-label='Show menu']")
+	public WebElement userShowmenubutton;
+	@FindBy(css = "flt-semantics[aria-label='Edit']")
+	public WebElement Edituserbutton;
+	@FindBy(css = "input[aria-label='Manager Name']")
+	public WebElement EditManagerField;
+	
+	
 	
 	public void clickOnIntermediary() {
 		IntermediaryDropdown.isEnabled();
@@ -110,6 +122,28 @@ public class IntermediaryInsurerListPage {
 	public void clickOnCreate() {
 		CreateBtn.isEnabled();
 		CreateBtn.click();
+	}
+	public void searchInsurer(String Insurername) {
+		SearchField.isEnabled();
+		SearchField.sendKeys(Insurername);
+	}
+	
+	public void clickOnUser() {
+		Userbutton.isEnabled();
+		Userbutton.click();
+	}
+	public void clickOnUserShowMenu() {
+		userShowmenubutton.isDisplayed();
+		userShowmenubutton.click();
+	}
+	public void clickOnUserEdit() {
+		Edituserbutton.isEnabled();
+		Edituserbutton.click();
+	}
+	
+	public void clickManagerName() {
+		EditManagerField.isDisplayed();
+		EditManagerField.click();
 	}
 
 

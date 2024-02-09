@@ -1,5 +1,6 @@
 package com.securisk.utilities;
 
+import java.awt.Desktop.Action;
 import java.io.File;
 import java.io.IOException;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -62,6 +64,11 @@ public class Reusablemethods {
 				"./Screenshots" + "/" + filename + System.currentTimeMillis() + ".png");
 		Files.copy(loc, file);
 		return file.getAbsolutePath();
+	}
+	
+	public void doubleClickText(WebElement element) {
+		Actions act = new Actions(driver);
+		act.doubleClick(element);
 	}
  
 

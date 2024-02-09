@@ -138,7 +138,6 @@ public class IntermediaryProductsPage {
 
 	public void searchProduct(String productname) {
 		SearchField.isEnabled();
-//		SearchField.clear();
 		SearchField.sendKeys(productname);
 	}
 	

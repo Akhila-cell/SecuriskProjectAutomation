@@ -1,5 +1,6 @@
 package com.securisk.testcases;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.testng.annotations.Test;
 
 import com.securisk.pageobjects.IntermediaryInsurerListPage;
@@ -11,7 +12,7 @@ public class IntermediaryCreateInsurerTest extends BaseClass {
 
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void createInsurer() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 		Tc_LoginPage tc = new Tc_LoginPage();
@@ -38,6 +39,28 @@ public class IntermediaryCreateInsurerTest extends BaseClass {
 		WaitUntilElementVisible(il.CreateBtn);
 		il.clickOnCreate();
 
+	}
+	
+	@Test(priority = 3)
+	public void editUser() {
+		Reusablemethods rc = new Reusablemethods(driver);
+		IntermediaryInsurerListPage il = new IntermediaryInsurerListPage(driver);
+		WaitUntilElementVisible(il.SearchField);
+		il.searchInsurer("DemoInsurer");
+		WaitUntilElementVisible(il.Userbutton);
+		il.clickOnUser();
+		try {
+			WaitUntilElementVisible(il.userShowmenubutton);
+			il.clickOnUserShowMenu();
+		} catch (StaleElementReferenceException e) {
+			WaitUntilElementVisible(il.userShowmenubutton);
+			il.clickOnUserShowMenu();
+		}
+		WaitUntilElementVisible(il.Edituserbutton);
+		il.clickOnUserEdit();
+		WaitUntilElementVisible(il.EditManagerField);
+		il.clickManagerName();
+		rc.doubleClickText(il.EditManagerField);
 	}
 
 }
