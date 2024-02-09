@@ -2,6 +2,7 @@ package com.securisk.pageobjects;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -161,7 +162,7 @@ public class IntermediaryProductsPage {
 
 	public void enterCoverageName(String Coveragename) throws Exception {
 		AddCoverageBtn.isDisplayed();
-		AddCoverageBtn.click();
+		AddCoverageBtn.click();;
 		Robot r = new Robot();
 		Thread.sleep(2000);
 		r.keyPress(KeyEvent.VK_TAB);

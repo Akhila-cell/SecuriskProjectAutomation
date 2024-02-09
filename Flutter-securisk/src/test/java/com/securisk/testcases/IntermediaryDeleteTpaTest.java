@@ -7,7 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.securisk.pageobjects.IntermediaryTpaPageElements;
 import com.securisk.utilities.Reusablemethods;
 
-public class IntermediaryDeleteTpa extends IntermediaryEditTpa {
+public class IntermediaryDeleteTpaTest extends IntermediaryEditTpa {
 
 	@Test(priority = 10)
 	public void DeleteTpa() throws Exception {

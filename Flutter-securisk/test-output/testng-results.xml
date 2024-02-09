@@ -1,57 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-08T10:35:26 IST" name="Suite" finished-at="2024-02-08T10:36:42 IST" duration-ms="76143">
+  <suite started-at="2024-02-08T16:47:13 IST" name="Default suite" finished-at="2024-02-08T16:47:30 IST" duration-ms="16927">
     <groups>
     </groups>
-    <test started-at="2024-02-08T10:35:26 IST" name="Test" finished-at="2024-02-08T10:36:42 IST" duration-ms="76143">
-      <class name="com.securisk.testcases.IntermediaryDeleteTpa">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:35:19 IST" name="setup" finished-at="2024-02-08T10:35:26 IST" duration-ms="6643" status="PASS">
+    <test started-at="2024-02-08T16:47:13 IST" name="Default test" finished-at="2024-02-08T16:47:30 IST" duration-ms="16927">
+      <class name="com.securisk.testcases.IntermediaryCreateInsurerTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.securisk.testcases.IntermediaryCreateInsurerTest@70e9c95d]" started-at="2024-02-08T16:47:06 IST" name="setup" finished-at="2024-02-08T16:47:13 IST" duration-ms="7414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addProduct()[pri:2, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:35:26 IST" name="addProduct" finished-at="2024-02-08T10:35:45 IST" duration-ms="19534" status="PASS">
+        <test-method signature="createInsurer()[pri:0, instance:com.securisk.testcases.IntermediaryCreateInsurerTest@70e9c95d]" started-at="2024-02-08T16:47:13 IST" name="createInsurer" finished-at="2024-02-08T16:47:30 IST" duration-ms="16910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProduct -->
-        <test-method signature="addProductWithInvalid()[pri:3, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:35:45 IST" name="addProductWithInvalid" finished-at="2024-02-08T10:35:53 IST" duration-ms="7681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProductWithInvalid -->
-        <test-method signature="addCoverage()[pri:4, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:35:53 IST" name="addCoverage" finished-at="2024-02-08T10:36:06 IST" duration-ms="12953" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCoverage -->
-        <test-method signature="addCoverageWithInvalidata()[pri:5, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:06 IST" name="addCoverageWithInvalidata" finished-at="2024-02-08T10:36:08 IST" duration-ms="2466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCoverageWithInvalidata -->
-        <test-method signature="editProduct()[pri:6, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:08 IST" name="editProduct" finished-at="2024-02-08T10:36:19 IST" duration-ms="10848" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editProduct -->
-        <test-method signature="deleteProduct()[pri:7, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:19 IST" name="deleteProduct" finished-at="2024-02-08T10:36:29 IST" duration-ms="9989" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteProduct -->
-        <test-method signature="createTpa()[pri:8, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:29 IST" name="createTpa" finished-at="2024-02-08T10:36:36 IST" duration-ms="6346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createTpa -->
-        <test-method signature="editTpa()[pri:9, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:36 IST" name="editTpa" finished-at="2024-02-08T10:36:39 IST" duration-ms="3879" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editTpa -->
-        <test-method signature="DeleteTpa()[pri:10, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:39 IST" name="DeleteTpa" finished-at="2024-02-08T10:36:42 IST" duration-ms="2385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteTpa -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.securisk.testcases.IntermediaryDeleteTpa@229c6181]" started-at="2024-02-08T10:36:42 IST" name="teardown" finished-at="2024-02-08T10:36:42 IST" duration-ms="157" status="PASS">
+        </test-method> <!-- createInsurer -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.securisk.testcases.IntermediaryCreateInsurerTest@70e9c95d]" started-at="2024-02-08T16:47:30 IST" name="teardown" finished-at="2024-02-08T16:47:31 IST" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.securisk.testcases.IntermediaryDeleteTpa -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.securisk.testcases.IntermediaryCreateInsurerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
