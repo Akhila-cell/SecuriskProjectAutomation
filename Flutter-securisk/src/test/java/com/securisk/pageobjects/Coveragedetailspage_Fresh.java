@@ -21,8 +21,8 @@ public class Coveragedetailspage_Fresh {
 		PageFactory.initElements(driver, this);
 	}
 
-	 //@FindBy(css ="flt-semantics[aria-label='-----Policy Type-----']")
-	@FindBy(xpath = "//*[@aria-label='-----Policy Type-----']")
+	 @FindBy(css ="flt-semantics[aria-label='-----Policy Type-----']")
+	//@FindBy(xpath = "//*[@aria-label='-----Policy Type-----'")
 	public WebElement clickonPloicyType;
 
 	public void clickOnPolicyType() throws InterruptedException {
@@ -114,7 +114,7 @@ public class Coveragedetailspage_Fresh {
 		Robot rb = new Robot();
 		// copying File path to Clipboard
 	    String path=System.getProperty("user.dir");
-		StringSelection str = new StringSelection(path+"\\data\\Allcombination_collaborate 1.xlsx");
+		StringSelection str = new StringSelection(path+"\\data\\AD testing 2.xlsx");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 		// press Contol+V for pasting
 		rb.keyPress(KeyEvent.VK_CONTROL);
