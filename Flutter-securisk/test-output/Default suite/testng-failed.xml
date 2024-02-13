@@ -6,7 +6,7 @@
       <class name="com.securisk.testcases.IntermediaryCreateInsurerTest">
         <methods>
           <include name="setup"/>
-          <include name="editUser"/>
+          <include name="deleteUser"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.securisk.testcases.IntermediaryCreateInsurerTest -->
