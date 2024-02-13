@@ -49,7 +49,7 @@ public class Tc_LoginPage extends BaseClass {
 		
   }
 		Thread.sleep(2000);
-		Rm.Screenshot(driver, "Homepage");
+//		Rm.Screenshot(driver, "Homepage");
 		endReport();
 		
 	}

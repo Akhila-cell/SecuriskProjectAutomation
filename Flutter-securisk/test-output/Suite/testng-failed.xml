@@ -3,6 +3,7 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.securisk.testcases.Tc_PolicytermsFresh">
         <methods>
           <include name="setup"/>
@@ -13,6 +14,15 @@
           <include name="rfqTestcase"/>
         </methods>
       </class> <!-- com.securisk.testcases.Tc_PolicytermsFresh -->
+=======
+      <class name="com.securisk.testcases.IntermediaryCreateInsurerTest">
+        <methods>
+          <include name="setup"/>
+          <include name="deleteUser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.securisk.testcases.IntermediaryCreateInsurerTest -->
+>>>>>>> ca91fd35f8c637290f36caf425b67e684e326e70
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
