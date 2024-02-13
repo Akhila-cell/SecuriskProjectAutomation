@@ -137,9 +137,34 @@ public class IntermediaryCreateInsurerTest extends IntermediaryDeleteTpaTest {
 		il.clickonOkBtn();
 		endReport();
 	}
-	
-
 	@Test(priority = 15)
+	public void editInsurer() throws Exception {
+		Reusablemethods rc = new Reusablemethods(driver);
+		IntermediaryInsurerListPage il = new IntermediaryInsurerListPage(driver);
+		test = reports.startTest("edit Insurer");
+		WaitUntilElementVisible(il.SearchField);
+		il.searchInsurer("Demo");
+		WaitUntilElementVisible(il.ActionsShowMenu);
+		il.clickOnActions();
+		WaitUntilElementVisible(il.EditInsurerbutton);
+		il.clickOnInsurerEdit();
+		WaitUntilElementVisible(il.EditLocation);
+		il.editUserLocation();
+		WaitUntilElementVisible(il.HydValue);
+		il.selectLocation("Hyderabad");
+		WaitUntilElementVisible(il.SubmitBtn);
+		il.clickOnSubmit();
+		WaitUntilElementVisible(il.ConfirmEditInsurer);
+		String path = rc.ScreenshotPath("EditInsurer");
+		Assert.assertTrue(il.confirmInsurerEdit());
+		test.log(LogStatus.PASS, test.addScreenCapture(path) + "Edit Insurer scucessfull");
+		WaitUntilElementVisible(il.ClosePopupbtn);
+		il.closePopUP();
+		endReport();
+
+	}
+
+	@Test(priority = 16)
 	public void deleteInsurer() throws Exception {
 		Reusablemethods rc = new Reusablemethods(driver);
 		IntermediaryInsurerListPage il = new IntermediaryInsurerListPage(driver);
