@@ -83,7 +83,10 @@ public class IntermediaryInsurerListPage {
 	public WebElement DeleteInsurerBtn;
 	@FindBy(css = "flt-semantics[aria-label='Deleted Successfully']")
 	public WebElement ConfirmDeleteInsurer;
-	
+	@FindBy(css = "flt-semantics[aria-label='Edit']")
+	public WebElement EditInsurerbutton;
+	@FindBy(css = "flt-semantics[aria-label='Insurer updated successfully!']")
+	public WebElement ConfirmEditInsurer;
 	
 
 	public void clickOnIntermediary() {
@@ -247,7 +250,13 @@ public class IntermediaryInsurerListPage {
 		AlertCloseBtn.isEnabled();
 		AlertCloseBtn.click();
 	}
-	
+	public void clickOnInsurerEdit() {
+		EditInsurerbutton.isEnabled();
+		EditInsurerbutton.click();
+	}
+	public boolean confirmInsurerEdit() {
+		return ConfirmEditInsurer.isDisplayed();
+	}
 	public void clickOnDeleteInsurer() {
 		DeleteInsurerBtn.isEnabled();
 		DeleteInsurerBtn.click();
