@@ -21,7 +21,7 @@ public class IntermediaryAddProductTest extends BaseClass{
 			Tc_LoginPage tc= new Tc_LoginPage();
 			tc.launch();
 			IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
-			startReport("IntermediaryAddProducts");
+			startReport("Intermediary");
 			test = reports.startTest("AddProduct With Valid Data");
 			WaitUntilElementVisible(ip.IntermediaryDropdown);
 			ip.clickOnIntermediary();
@@ -53,13 +53,9 @@ public class IntermediaryAddProductTest extends BaseClass{
 			Reusablemethods rc = new Reusablemethods(driver);
 			IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
 			test = reports.startTest("AddProduct With InValid Data");
-			WaitUntilElementVisible(ip.IntermediaryDropdown);
-			ip.clickOnIntermediary();
-			Thread.sleep(3000);
-			WaitUntilElementVisible(ip.ProductsButton);
-			ip.clickOnProducts();
-			test.log(LogStatus.PASS, "Products Selected");
+			WaitUntilElementVisible(ip.CreateProductButton);
 			ip.clickOnCreateProduct();
+			test.log(LogStatus.PASS, "CreateProduct Clicked");
 			WaitUntilElementVisible(ip.ProductnameFiled);
 			ip.enterProductName("");
 			WaitUntilElementVisible(ip.AddProduct);		

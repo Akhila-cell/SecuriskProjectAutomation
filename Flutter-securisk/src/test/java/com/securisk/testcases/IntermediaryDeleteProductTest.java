@@ -18,13 +18,9 @@ public class IntermediaryDeleteProductTest extends IntermediaryEditProductTest {
 		Reusablemethods rc = new Reusablemethods(driver);
 		IntermediaryProductsPage ip = new IntermediaryProductsPage(driver);
 		test = reports.startTest("Delete Product");
-		WaitUntilElementVisible(ip.IntermediaryDropdown);
-		ip.clickOnIntermediary();
-		Thread.sleep(3000);
-		WaitUntilElementVisible(ip.ProductsButton);
-		ip.clickOnProducts();
-		WaitUntilElementVisible(ip.FilterDropdown);
-		ip.Filtertype();
+//		ip.clickOnProducts();
+//		WaitUntilElementVisible(ip.FilterDropdown);
+//		ip.Filtertype();
 		WaitUntilElementVisible(ip.SearchField);
 		ip.searchProduct("Demo");
 		test.log(LogStatus.PASS, "Product Searched");

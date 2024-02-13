@@ -3,6 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.securisk.testcases.IntermediaryCreateInsurerTest">
+        <methods>
+          <include name="setup"/>
+          <include name="deleteUser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.securisk.testcases.IntermediaryCreateInsurerTest -->
+=======
       <class name="com.securisk.testcases.Tc_ActionsInRenewal">
         <methods>
           <include name="setup"/>
@@ -10,6 +19,7 @@
           <include name="ActionsTest"/>
         </methods>
       </class> <!-- com.securisk.testcases.Tc_ActionsInRenewal -->
+>>>>>>> f63a13900980c448c1a7ee041e9283fb9038bfeb
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

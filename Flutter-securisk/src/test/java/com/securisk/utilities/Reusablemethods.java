@@ -1,5 +1,7 @@
 package com.securisk.utilities;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -7,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -59,9 +62,23 @@ public class Reusablemethods {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File loc = ts.getScreenshotAs(OutputType.FILE);
 		File file = new File(
-				"./Screenshots" + "/" + filename + System.currentTimeMillis() + ".png");
+				"./Screenshots" + "/" + filename+ ".png");
 		Files.copy(loc, file);
 		return file.getAbsolutePath();
+	}
+	
+	public void doubleClickText(WebElement element) {
+		Actions act = new Actions(driver);
+		act.doubleClick(element);
+	}
+	
+	public void deleteText(WebElement element,int value,String name1) throws Exception {
+		Robot robo= new Robot();
+		for(int i=0;i<value;i++) {
+		robo.keyPress(KeyEvent.VK_BACK_SPACE);
+		robo.keyRelease(KeyEvent.VK_BACK_SPACE);
+		}
+		element.sendKeys(name1);
 	}
  
 

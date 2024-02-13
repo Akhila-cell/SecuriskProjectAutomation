@@ -18,12 +18,12 @@ public class IntermediaryEditProductTest extends IntemediaryAddCoverageTest {
 		Reusablemethods rc = new Reusablemethods(driver);
 		test = reports.startTest("Edit Product");
 		WaitUntilElementVisible(ip.IntermediaryDropdown);
-		ip.clickOnIntermediary();
-		Thread.sleep(3000);
-		WaitUntilElementVisible(ip.ProductsButton);
-		ip.clickOnProducts();
-		WaitUntilElementVisible(ip.FilterDropdown);
-		ip.Filtertype();
+//		ip.clickOnIntermediary();
+//		Thread.sleep(3000);
+//		WaitUntilElementVisible(ip.ProductsButton);
+//		ip.clickOnProducts();
+//		WaitUntilElementVisible(ip.FilterDropdown);
+//		ip.Filtertype();
 		WaitUntilElementVisible(ip.SearchField);
 		ip.searchProduct("Demo");
 		WaitUntilElementVisible(ip.ShowmenuBtn);
