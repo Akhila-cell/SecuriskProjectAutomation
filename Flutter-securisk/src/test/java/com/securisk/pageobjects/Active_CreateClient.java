@@ -1,7 +1,10 @@
 package com.securisk.pageobjects;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -35,7 +38,7 @@ public class Active_CreateClient {
 	}
 
 	// Create Client
-	@FindBy(css = "flt-semantics[aria-label='Create Client']")
+	@FindBy(css = "flt-semantics[aria-label=\"Create Client\"]")
 	WebElement CreateClient;
 
 	public void Create_Client() {
@@ -46,7 +49,7 @@ public class Active_CreateClient {
 	WebElement ClientName;
 
 	public void client_Name() {
-		gs.textField(ClientName, "KfinTechTCS");
+		gs.textField(ClientName, "TCS");
 
 	}
 
@@ -71,7 +74,7 @@ public class Active_CreateClient {
 		Product.click();
 	}
 
-	@FindBy(css = " flt-semantics[aria-label=\"Stationary\"]")
+	@FindBy(css = "flt-semantics[aria-label=\"new products\"]")
 	WebElement ProductDrop;
 
 	public void product_Drop_Type() {
@@ -121,7 +124,7 @@ public class Active_CreateClient {
 	WebElement Search;
 
 	public void searchop() {
-		Search.sendKeys("KfinTech");
+		Search.sendKeys("TCS");
 
 	}
 
@@ -178,7 +181,7 @@ public class Active_CreateClient {
 		ProductType.click();
 	}
 
-	@FindBy(xpath = "(//*[@aria-label=\"new product (a)\"])[3]")
+	@FindBy(css = "(flt-semantics[aria-label='Shipping & Containers']")
 	WebElement CovidPolicy;
 
 	public void covid_Policy() {
@@ -283,10 +286,16 @@ public class Active_CreateClient {
 
 	                                          // Delete Product
 	
-	@FindBy(css="flt-semantics[aria-label=\"9\"]")
+	@FindBy(css="flt-semantics[aria-label=\"2\"]")
 	WebElement DeleteProduct;
 	public void deleteProduct() {
 		DeleteProduct.click();
+	}
+
+	@FindBy(xpath="(//*[@aria-label=\"1\"])[2]")
+	WebElement DeleteProduct2;
+	public void deleteProduct2() {
+		DeleteProduct2.click();
 	}
 	@FindBy(xpath = "(//*[@aria-label=\"Show menu\"])[1]")
 	WebElement ProductNo;
@@ -319,44 +328,56 @@ public class Active_CreateClient {
 	}
 
 	                                                        // delete User
-	@FindBy(css = "flt-semantics[aria-label=\"8\"]")
+	@FindBy(xpath = "(//*[@aria-label='1'])[2]")
 	WebElement AddedUserNo;
 
 	public void addedUserNo1() {
 		AddedUserNo.click();
 	}
 
-	@FindBy(xpath = "(// flt-semantics[@aria-label=\"Show menu\"])[1]")
+	@FindBy(xpath = "//*[@aria-label=\"Show menu\"]")
 	WebElement AddedUserNo_Dots;
 
 	public void addedUserNo_Dots() {
 		AddedUserNo_Dots.click();
 	}
 
-	@FindBy(css = " flt-semantics[aria-label=\"Delete\"]")
+	@FindBy(xpath =  "//*[@aria-label=\"Delete\"]")
 	WebElement DeleteUser;
 
 	public void deleteUser() {
 		DeleteUser.click();
 	}
 
-	@FindBy(css = "flt-semantics[aria-label=\"Yes\"]")
-	WebElement Deletete_User_Yes;
+//	@FindBy(xpath = "//*[@aria-label=\"Delete\"]")
+//	WebElement Deletete_User_Yes;
+//
+//	public void deletete_User_Yes() {
+//		Deletete_User_Yes.click();
+//	}
 
-	public void deletete_User_Yes() {
-		Deletete_User_Yes.click();
-	}
-
-	@FindBy(css = " flt-semantics[aria-label=\"OK\"]")
+	@FindBy(xpath = "//*[@aria-label=\"Yes\"]")
 	WebElement Delete_User_Yes_Click;
 
 	public void deletete_User_Yes_Click() {
 		Delete_User_Yes_Click.click();
-	}                                                             //EDIT
+	}   
+	@FindBy(xpath = "//*[@aria-label='OK']")// flt-semantics[aria-label=\"OK\"]
+	WebElement DeleteUserFromUser;
+	
+	public void deleteUser_FromUser() {
+		 DeleteUserFromUser.isDisplayed();
+		 DeleteUserFromUser.click();
+	}
+	//EDIT
     @FindBy(css="flt-semantics[aria-label=\"Edit\"]")
     WebElement EditClick;
-    public void editClick() {
+    public void editClick(String edit) throws Exception {
 	EditClick.click();
+	Thread.sleep(3000);
+	EditClick.clear();
+	EditClick.sendKeys(edit);
+	
 }
 	@FindBy(xpath= "//*[@aria-label='Client Name']")
 	WebElement Edit;
@@ -416,58 +437,76 @@ public class Active_CreateClient {
 	}
 	@FindBy(css=" input[aria-label=\"Employee Id\"]")
 	WebElement EMPID;
-	public void empid_user() throws Exception {
-		 Thread.sleep(3000);
-		 EMPID.click();
-		 Thread.sleep(3000);
-		 EMPID.clear();
-		 Thread.sleep(3000);
-		 gs.textField(EmployeeId, "5678944");
+	public void empid_user(String empid) throws Exception {
+		EMPID.click();
+		Thread.sleep(8000);
+		EMPID.clear();
+		Thread.sleep(8000);
+		EMPID.sendKeys(empid);
 	}
-	@FindBy(css=" input[aria-label=\"Name\"]")
+	@FindBy(xpath="//*[@aria-label=\"Name\"]")
 	WebElement EmpId_User;
-	public void  empId_UserName() throws Exception {
-		 Thread.sleep(3000);
-		 EmployeeName.click();
-		 Thread.sleep(3000);
-		 EmployeeName.clear();
-		 Thread.sleep(3000);
-		 EmployeeName.sendKeys("Babitha");
-		 //gs.textField(EmployeeName, "Babitha");
-	}
+	public void  empId_UserName(String  uName) throws Exception {
+		
+		EmpId_User.click();
+		Thread.sleep(3000);
+		EmpId_User.clear();
+		Thread.sleep(3000);
+		EmpId_User.sendKeys(uName);
 
-	@FindBy(css = "flt-semantics[aria-label=\"CRM Executive\"]")
+	}
+	
+
+	@FindBy(xpath= "//*[@aria-label=\"Accounts Head\"]")
 	WebElement Designation2;
 
-	public void designation2() {
+	public void designation2( ) throws Exception {
 		Designation2.click();
+		
 	}
 	@FindBy(css=" input[aria-label=\"Email\"]")
 	WebElement EmailId_User;
-	public void  emailId_User() throws Exception {
+	public void  emailId_User(String email) throws Exception {
 		EmailId_User.click();
-		 Thread.sleep(3000);
-		 EmailId_User.clear();
-		 Thread.sleep(3000);
-		gs.textField(EmailId,"babithamyakala@gmail.com");
+		Thread.sleep(3000);
+		EmailId_User.clear();
+		Thread.sleep(3000);
+		EmailId_User.sendKeys(email);
+		
 	}
-	@FindBy(css=" input[aria-label=\"Email\"]")
+	@FindBy(css=" input[aria-label=\"Phone Number\"]")
 	WebElement Phone_User;
-	public void  phone_User() throws Exception {
-		 Phone_User.click();
-		 Thread.sleep(3000);
-		 Phone_User.clear();
-		 Thread.sleep(3000);
-		gs.textField(PhoneNumber,"1275489456");
-	}
+    public void phn(String phoneno) {
+	Phone_User.click();
+	Phone_User.clear();
+	Phone_User.sendKeys(phoneno);
+}
 	@FindBy(css="flt-semantics[aria-label=\"Submit\"]")
 	WebElement Submit_User;
 	public void submit_User() {
 		Submit_User.click();
 	}
+	
+	
 	@FindBy(xpath="(//*[@aria-label=\"8\"])[2]")
 	WebElement EditUserButton2;
 	public void editUserButton2() {
 		EditUserButton2.click();
 	}
+	@FindBy(css="flt-semantics[aria-label='Delete']")
+	WebElement deleteAll;
+	public void delete_All() {
+		deleteAll.click();
+	}
+	@FindBy(css="flt-semantics[aria-label='Yes']")
+	WebElement DeleteAll_Yes;
+	public void deleteAll_Yes() {
+	DeleteAll_Yes.click();
+	}
+	@FindBy(css=" flt-semantics[aria-label='OK']")
+	WebElement DeleteAll_Yes_Ok;
+	public void deleteAll_Yes_Ok() {
+		DeleteAll_Yes_Ok.click();
+	}
 }
+

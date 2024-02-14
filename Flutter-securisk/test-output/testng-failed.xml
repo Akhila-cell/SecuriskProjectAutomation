@@ -5,9 +5,14 @@
     <classes>
       <class name="com.securisk.testcases.CreateClient_Test_SubModules">
         <methods>
+          <include name="productNumber"/>
           <include name="setup"/>
-          <include name="editUser"/>
+          <include name="deleteAll"/>
+          <include name="productNumber2"/>
           <include name="teardown"/>
+          <include name="showProducts"/>
+          <include name="userNoClick"/>
+          <include name="addUser"/>
         </methods>
       </class> <!-- com.securisk.testcases.CreateClient_Test_SubModules -->
     </classes>
