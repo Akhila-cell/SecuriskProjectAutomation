@@ -19,14 +19,13 @@ WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	//@FindBy(xpath = "//*[@aria-label='Employee Dependent Details']")
-	@FindBy(css="flt-semantics[aria-label='Employee Dependent Details']")
+	@FindBy(xpath = "//*[@aria-label='Employee Dependent Details']")
+	//@FindBy(css="flt-semantics[aria-label='Employee Dependent Details']")
 	public WebElement clickon_EmployeeDepedent;
 
 	public void clickonEmployeeDepedent() throws InterruptedException, AWTException {
 
 		clickon_EmployeeDepedent.click();
-		Thread.sleep(2000);
 		Robot rb1 = new Robot();
 		rb1.keyPress(KeyEvent.VK_ESCAPE);
 		rb1.keyRelease(KeyEvent.VK_ESCAPE);

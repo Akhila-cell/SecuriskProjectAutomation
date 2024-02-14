@@ -21,7 +21,7 @@ public class Coveragedetailspage_Fresh {
 		PageFactory.initElements(driver, this);
 	}
 
-	 //@FindBy(css ="flt-semantics[aria-label='-----Policy Type-----']")
+	// @FindBy(css="flt-semantics[aria-label='-----Policy Type-----']")
 	@FindBy(xpath = "//*[@aria-label='-----Policy Type-----']")
 	public WebElement clickonPloicyType;
 

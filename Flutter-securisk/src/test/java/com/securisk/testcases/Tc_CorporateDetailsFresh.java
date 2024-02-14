@@ -21,44 +21,58 @@ public class Tc_CorporateDetailsFresh extends Tc_RfqPageFresh {
 		Coveragedetailspage_Fresh cd = new Coveragedetailspage_Fresh(driver);
 		test = reports.startTest("Verify the corporatedetails page");
 		test.log(LogStatus.PASS, "Enter name of insured ");
+		Thread.sleep(2000);
 		CRFQ.createNameofInsured("Akhila");
-		//Thread.sleep(2000);
+		WaitUntilElementVisible(CRFQ.NameOfInsured);
+		Thread.sleep(2000);
 		test.log(LogStatus.PASS, "Enter intermediaryname ");
 		CRFQ.EnterIntermediaryName("Securisk");
+		//WaitUntilElementVisible(CRFQ.NameOfIntermediary);
 		Thread.sleep(2000);
 		test.log(LogStatus.PASS, "Enter Address ");
 		CRFQ.EnterAddress("Hyderabad");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.Address);
 		test.log(LogStatus.PASS, "Enter contactname in intermediary details ");
 		CRFQ.contactNameinintermediarydetails("Siri");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.Contactnameintermediary);
 		test.log(LogStatus.PASS, "Click on nature of bussiness ");
 		CRFQ.natureOfBusiness();
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.Natureofbusines);
 		test.log(LogStatus.PASS, "Select nature of business");
 		CRFQ.selectnatureOB();
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.SelectNOB);
 		test.log(LogStatus.PASS, "Enter email Id in intermediary details ");
 		CRFQ.emailidinIntermediarydetails("securisk12@gmail.com");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.EmailidIn);
 		test.log(LogStatus.PASS, "Enter contact name in details ");
 		CRFQ.contactNameindetails("Sarwesh");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.Contactnamedetails);
 		test.log(LogStatus.PASS, "Enter Phone number in intermediary ");
 		CRFQ.phoneNumberinintermediary("9786563211");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.PhonenumberI);
 		test.log(LogStatus.PASS, "Enter email id in details ");
 		CRFQ.emailidinInDetails("akhila12@gmail.com");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.EmailidD);
 		test.log(LogStatus.PASS, "Enter phone number in details ");
 		CRFQ.phoneNumberinDetails("8897654320");
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.PhonenumberD);
 		test.log(LogStatus.PASS, "Click on location dropdown ");
 		CRFQ.clickonLocation();
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.Location);
 		test.log(LogStatus.PASS, "select the location ");
 		CRFQ.selectingLocation();
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.SelectLocation);
 
 		test.log(LogStatus.PASS, "Click on next button");
 		CRFQ.clickonnextbutton();
@@ -75,15 +89,13 @@ public class Tc_CorporateDetailsFresh extends Tc_RfqPageFresh {
 			test.log(LogStatus.FAIL, "Corporate details not entered successfully");
 		}
 
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String Path = Rm.ScreenshotPath("CoverageDetailspage");
 		test.log(LogStatus.PASS, test.addScreenCapture(Path) + "Corporate details entered successfully");
 		Thread.sleep(3000);
 		endReport();
 		//Rm.Scrollup();
 		
-		
-		//Thread.sleep(3000);
 	}
 
 }
