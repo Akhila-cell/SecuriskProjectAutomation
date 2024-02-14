@@ -3,21 +3,26 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.securisk.testcases.IntermediaryDeleteTpa">
+<<<<<<< HEAD
+      <class name="com.securisk.testcases.Tc_PolicytermsFresh">
         <methods>
           <include name="setup"/>
-          <include name="addProductWithInvalid"/>
-          <include name="editTpa"/>
-          <include name="editProduct"/>
-          <include name="addCoverage"/>
-          <include name="deleteProduct"/>
-          <include name="createTpa"/>
-          <include name="DeleteTpa"/>
+          <include name="PolicytermsPage"/>
           <include name="teardown"/>
-          <include name="addCoverageWithInvalidata"/>
-          <include name="addProduct"/>
+          <include name="createrfq"/>
+          <include name="coveragedetailspage"/>
+          <include name="rfqTestcase"/>
         </methods>
-      </class> <!-- com.securisk.testcases.IntermediaryDeleteTpa -->
+      </class> <!-- com.securisk.testcases.Tc_PolicytermsFresh -->
+=======
+      <class name="com.securisk.testcases.IntermediaryCreateInsurerTest">
+        <methods>
+          <include name="setup"/>
+          <include name="deleteUser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.securisk.testcases.IntermediaryCreateInsurerTest -->
+>>>>>>> ca91fd35f8c637290f36caf425b67e684e326e70
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
