@@ -18,19 +18,10 @@ public class SendRfqpage_Fresh {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-<<<<<<< HEAD
 	
 	@FindBy(xpath = "//*[@aria-label='Employee Dependent Details']")
 	//@FindBy(css="flt-semantics[aria-label='Employee Dependent Details']")
 	public WebElement clickon_EmployeeDepedent;
-=======
-
-	// @FindBy(xpath = "//*[@aria-label='Employee Dependent Details']")
-	@FindBy(css = "flt-semantics[aria-label='Employee Dependent Details']")
-	public
-	WebElement clickon_EmployeeDepedent;
-	// public WebElement clickon_EmployeeDepedent;
->>>>>>> 5a8522370e3dcadefee2150845b7144fa9dac12c
 
 	public void clickonEmployeeDepedent() throws InterruptedException, AWTException {
 

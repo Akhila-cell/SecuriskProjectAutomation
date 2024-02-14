@@ -21,13 +21,8 @@ public class Coveragedetailspage_Fresh {
 		PageFactory.initElements(driver, this);
 	}
 
-<<<<<<< HEAD
 	// @FindBy(css="flt-semantics[aria-label='-----Policy Type-----']")
 	@FindBy(xpath = "//*[@aria-label='-----Policy Type-----']")
-=======
-	 @FindBy(css ="flt-semantics[aria-label='-----Policy Type-----']")
-	//@FindBy(xpath = "//*[@aria-label='-----Policy Type-----'")
->>>>>>> 5a8522370e3dcadefee2150845b7144fa9dac12c
 	public WebElement clickonPloicyType;
 
 	public void clickOnPolicyType() throws InterruptedException {
