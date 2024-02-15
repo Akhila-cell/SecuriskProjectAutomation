@@ -96,29 +96,26 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 		test.log(LogStatus.PASS, " Click on ABADownloadButton");
 		WaitUntilElementVisible(SRFQ.clickon_ABADownload);
 		SRFQ.clickonABADownload();
-		SRFQ.clickonDownload();
-		driver.switchTo().alert().accept();
-		test.log(LogStatus.PASS, " Click on RFQDownloadButton");
-		WaitUntilElementVisible(SRFQ.clickon_RFQDownload);
-		SRFQ.clickonRFQDownload();
-		Thread.sleep(2000);
-		SRFQ.clickonDownload();
-		test.log(LogStatus.PASS, " Click on EDDDownloadButton");
-		WaitUntilElementVisible(SRFQ.clickon_EDDDownload);
-		SRFQ.clickon_EDDDownload();
-		Thread.sleep(2000);
-		SRFQ.clickonDownload();
-		test.log(LogStatus.PASS, " Click on ZIPDownloadButton");
-		WaitUntilElementVisible(SRFQ.clickon_ZIPDownload);
-		SRFQ.clickonZIPDownload();
-		Thread.sleep(2000);
+//		SRFQ.clickonDownload();
+//		driver.switchTo().alert().accept();
+//		test.log(LogStatus.PASS, " Click on RFQDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_RFQDownload);
+//		SRFQ.clickonRFQDownload();
+//		Thread.sleep(2000);
+//		SRFQ.clickonDownload();
+//		test.log(LogStatus.PASS, " Click on EDDDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_EDDDownload);
+//		SRFQ.clickon_EDDDownload();
+//		Thread.sleep(2000);
+//		SRFQ.clickonDownload();
+//		test.log(LogStatus.PASS, " Click on ZIPDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_ZIPDownload);
+//		SRFQ.clickonZIPDownload();
+//		Thread.sleep(2000);
 		WaitUntilElementVisible(SRFQ.clickon_Close);
 		SRFQ.clickonClose();
 		Thread.sleep(5000);
-		Reusablemethods Rm = new Reusablemethods(driver);
-		CorpporateDetailspage_Fresh CRFQ =new CorpporateDetailspage_Fresh(driver);
-		RfqPage_Fresh RP =new RfqPage_Fresh(driver);
-		RP.CreateRfq();
+		SRFQ.clickOnHomeButton();
 
 }
 	

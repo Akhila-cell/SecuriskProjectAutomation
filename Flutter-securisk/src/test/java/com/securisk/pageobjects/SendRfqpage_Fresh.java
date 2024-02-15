@@ -177,5 +177,12 @@ public class SendRfqpage_Fresh {
 
 		clickon_Close.click();
 	}
+	@FindBy(css = "flt-semantics[aria-label='HOME']")
+	public WebElement Homebutton;
+	
+	public void clickOnHomeButton() {
+		Homebutton.click();
+	}
+
 
 }
