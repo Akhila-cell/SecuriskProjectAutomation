@@ -98,7 +98,7 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 //		test.log(LogStatus.PASS, " Click on ZIPDownloadButton");
 //		WaitUntilElementVisible(SRFQ.clickon_ZIPDownload);
 //		SRFQ.clickonZIPDownload();
-//		Thread.sleep(2000);
+		Thread.sleep(2000);
 		WaitUntilElementVisible(SRFQ.clickon_Close);
 		SRFQ.clickonClose();
 		Thread.sleep(5000);
