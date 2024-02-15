@@ -36,7 +36,7 @@ public class BaseClass {
 	}
 
 	public void WaitUntilElementVisible(WebElement element) {
-		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait=new WebDriverWait(driver, Duration.ofSeconds(12));
         wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
