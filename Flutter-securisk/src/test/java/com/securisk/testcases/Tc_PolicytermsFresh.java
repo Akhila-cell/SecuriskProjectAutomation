@@ -83,6 +83,32 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 		SRFQ.clickonDownload();
 		WaitUntilElementVisible(SRFQ.clickon_ABADownload);
 		SRFQ.clickonABADownload();
+
+//		SRFQ.clickonDownload();
+//		driver.switchTo().alert().accept();
+//		test.log(LogStatus.PASS, " Click on RFQDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_RFQDownload);
+//		SRFQ.clickonRFQDownload();
+//		Thread.sleep(2000);
+//		SRFQ.clickonDownload();
+//		test.log(LogStatus.PASS, " Click on EDDDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_EDDDownload);
+//		SRFQ.clickon_EDDDownload();
+//		Thread.sleep(2000);
+//		SRFQ.clickonDownload();
+//		test.log(LogStatus.PASS, " Click on ZIPDownloadButton");
+//		WaitUntilElementVisible(SRFQ.clickon_ZIPDownload);
+//		SRFQ.clickonZIPDownload();
+//		Thread.sleep(2000);
+		WaitUntilElementVisible(SRFQ.clickon_Close);
+		SRFQ.clickonClose();
+		Thread.sleep(5000);
+		SRFQ.clickOnHomeButton();
+
+}
+	
+ 
+
 		WaitUntilElementVisible(SRFQ.clickon_RFQDownload);
 		SRFQ.clickonRFQDownload();
 		WaitUntilElementVisible(SRFQ.clickon_EDDDownload);
@@ -92,6 +118,7 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 		WaitUntilElementVisible(SRFQ.clickon_Close);
 		SRFQ.clickonClose();
 		
+
 }
 
 
