@@ -22,7 +22,7 @@ public class IntermediaryEditTpa extends IntermediaryCreateTpaTest {
 		tp.clickOnEditTpa();
 		WaitUntilElementVisible(tp.EditTpaLocation);
 		tp.selectNewLocation();
-		WaitUntilElementVisible(tp.PuneValue);
+		WaitUntilElementVisible(tp.MumbaiValue);
 		tp.selectLocation("mumbai");
 		test.log(LogStatus.PASS, "New Location selected");
 		WaitUntilElementVisible(tp.SubmitTpaBtn);

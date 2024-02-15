@@ -47,39 +47,39 @@ public class RfqPage_Fresh {
 //	}
 
 	@FindBy(css = "flt-semantics[aria-label='EB']")
-	WebElement EB;
+	public WebElement EB;
 
 	public void SelectEB() {
 		EB.click();
 	}
 
 	@FindBy(css = "flt-semantics[aria-label=\"------Select Product type------\"]")
-	WebElement ProdType;
+	public WebElement ProdType;
 
 	public void SelectProdType() {
 		ProdType.click();
 	}
 
 	@FindBy(css = "flt-semantics[aria-label=\"Group Health Insurance (GHI)\"]")
-	WebElement GHI;
+	public WebElement GHI;
 
 	public void ghi() {
 		GHI.click();
 	}
 
 	@FindBy(css = "flt-semantics[aria-label=\"------Select Policy Type------\"]")
-	WebElement Policytype;
+	public WebElement Policytype;
 
 	public void SelectPolicyType() {
 		Policytype.click();
 	}
 	@FindBy(css = "flt-semantics[aria-label=\"Fresh\"]")
-	WebElement Fresh;
+	public WebElement Fresh;
 	public void SelectFresh() {
 		Fresh.click();
 	}
 	@FindBy(css = "flt-semantics[aria-label=\"Submit\"]")
-	WebElement ClickButton;
+	public WebElement ClickButton;
 	public void Submit() throws InterruptedException {
 		ClickButton.click();
 		//Thread.sleep(2000);

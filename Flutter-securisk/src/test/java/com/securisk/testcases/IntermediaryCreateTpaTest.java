@@ -30,7 +30,7 @@ public class IntermediaryCreateTpaTest  extends IntermediaryDeleteProductTest{
 		tp.enterTpaName("Test1");
 		WaitUntilElementVisible(tp.TpaLocationDropdown);
 		tp.clickonLocation();
-		WaitUntilElementVisible(tp.MumbaiValue);
+		WaitUntilElementVisible(tp.ChennaiValue);
 		tp.selectLocation("Chennai");
 		WaitUntilElementVisible(tp.CreateButton);
 		tp.clickOnCreate();
