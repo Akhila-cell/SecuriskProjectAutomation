@@ -101,12 +101,7 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 		//Thread.sleep(2000);
 		WaitUntilElementVisible(SRFQ.clickon_Close);
 		SRFQ.clickonClose();
-		Thread.sleep(5000);
-		SRFQ.clickOnHomeButton();
-
-}
-	
- 
-}
+		
+}}
 
 

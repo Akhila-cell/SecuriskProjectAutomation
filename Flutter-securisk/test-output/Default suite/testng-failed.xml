@@ -3,35 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a8522370e3dcadefee2150845b7144fa9dac12c
-      <class name="com.securisk.testcases.Tc_PolicytermsFresh">
+      <class name="com.securisk.testcases.Tc_Rfqpage_NonEB_Fresh">
         <methods>
+          <include name="rfqTestcase"/>
           <include name="setup"/>
-          <include name="PolicytermsPage"/>
-<<<<<<< HEAD
-=======
-
-      <class name="com.securisk.testcases.Tc_ActionsInRenewal">
-        <methods>
-          <include name="setup"/>
-
->>>>>>> 5a8522370e3dcadefee2150845b7144fa9dac12c
           <include name="teardown"/>
-          <include name="createrfq"/>
-          <include name="coveragedetailspage"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.securisk.testcases.Tc_PolicytermsFresh -->
-=======
-
-      </class> <!-- com.securisk.testcases.Tc_PolicytermsFresh -->
-
-      </class> <!-- com.securisk.testcases.Tc_ActionsInRenewal -->
-
->>>>>>> 5a8522370e3dcadefee2150845b7144fa9dac12c
+      </class> <!-- com.securisk.testcases.Tc_Rfqpage_NonEB_Fresh -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
