@@ -23,8 +23,8 @@ public class Tc_CorporateDetailsFresh extends Tc_RfqPageFresh {
 		test.log(LogStatus.PASS, "Enter name of insured ");
 		Thread.sleep(2000);
 		CRFQ.createNameofInsured("Akhila");
-		WaitUntilElementVisible(CRFQ.NameOfInsured);
 		Thread.sleep(2000);
+		//WaitUntilElementVisible(CRFQ.NameOfInsured);
 		test.log(LogStatus.PASS, "Enter intermediaryname ");
 		CRFQ.EnterIntermediaryName("Securisk");
 		//WaitUntilElementVisible(CRFQ.NameOfIntermediary);

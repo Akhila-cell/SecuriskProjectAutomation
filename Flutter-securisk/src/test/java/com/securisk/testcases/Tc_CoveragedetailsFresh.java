@@ -1,5 +1,6 @@
 package com.securisk.testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -49,9 +50,22 @@ public class Tc_CoveragedetailsFresh extends Tc_CorporateDetailsFresh {
 		test.log(LogStatus.PASS, "Uploading the employee dependent Data");
 		WaitUntilElementVisible(cd.employeedependentdata);
 		cd.clickon_employeedependentdata();
+		
 		cd.upload_EDD();
+		try {
+			boolean actual=cd.uploadbutton.isDisplayed();
+			 Assert.assertEquals(true, actual);
+			 test.log(LogStatus.PASS, "file uploaded successfully");
+			 //Srm1.Screenshot(driver, "Loginpage123");
+			
+			}catch (Exception e) {
+			System.out.println(e.getMessage());
+			test.log(LogStatus.FAIL,"file not uploaded");
+		
+  }
 		WaitUntilElementVisible(cd.uploadbutton);
 		cd.clickon_Uploadbutton();
+		
 		WaitUntilElementVisible(cd.Eyeicon);
 		test.log(LogStatus.PASS, "Checking the EDD by clicking on eyeicon");
 		cd.clickoneyeicon();

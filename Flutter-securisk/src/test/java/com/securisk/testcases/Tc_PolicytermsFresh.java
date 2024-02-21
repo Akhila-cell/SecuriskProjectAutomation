@@ -92,6 +92,6 @@ public class Tc_PolicytermsFresh extends Tc_CoveragedetailsFresh {
 		WaitUntilElementVisible(SRFQ.clickon_Close);
 		SRFQ.clickonClose();
 		
-}
+}}
 
 

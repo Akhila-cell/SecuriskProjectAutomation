@@ -21,7 +21,6 @@ public class CorpporateDetailspage_Fresh {
 
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", NameOfInsured);
-		Thread.sleep(3000);
 		NameOfInsured.sendKeys(name);
 		
      //Actions ac = new Actions(driver);
@@ -29,13 +28,12 @@ public class CorpporateDetailspage_Fresh {
      // NameOfInsured.sendKeys("Akhila");
 	}
 
-	@FindBy(xpath = "//*[@aria-label='Name of the Intermediary']")
+	@FindBy(xpath = "//*[@aria-label=\"Name of the Intermediary\"]")
 	public WebElement NameOfIntermediary;
 
 	public void EnterIntermediaryName(String intername) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", NameOfIntermediary);
-		Thread.sleep(3000);
 		NameOfIntermediary.sendKeys(intername);
 	}
 
@@ -46,7 +44,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", Address);
-		Thread.sleep(3000);
 		Address.sendKeys(add);
 	}
 
@@ -57,7 +54,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", Contactnameintermediary);
-		Thread.sleep(3000);
 		Contactnameintermediary.sendKeys(cname);
 	}
 	@FindBy(xpath = "//*[@aria-label='Nature of the Business']")
@@ -83,7 +79,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", EmailidIn);
-		Thread.sleep(2000);
 		EmailidIn.sendKeys(Inemailid);
 	}
 	
@@ -94,7 +89,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", Contactnamedetails);
-		Thread.sleep(2000);
 		Contactnamedetails.sendKeys(contactN);
 	}
 
@@ -105,7 +99,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", PhonenumberI);
-		Thread.sleep(2000);
 		PhonenumberI.sendKeys(InPno);
 	}
 	
@@ -116,7 +109,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", EmailidD);
-		Thread.sleep(2000);
 		EmailidD.sendKeys(Demailid);
 	}
 	
@@ -128,7 +120,6 @@ public class CorpporateDetailspage_Fresh {
 		
 		JavascriptExecutor js = (JavascriptExecutor) this.driver;
 		js.executeScript("arguments[0].click()", PhonenumberD);
-		Thread.sleep(2000);
 		PhonenumberD.sendKeys(dPno);
 	}
 	
